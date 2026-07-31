@@ -1,155 +1,182 @@
-# Delhi AQI — live 7-day forecast
+# Delhi AQI — Live 7-Day Forecast
 
-A live, self-updating air quality forecasting system for six Delhi locations,
-built on top of the original `notebooks/original_notebook.ipynb` analysis.
-Every day it pulls fresh weather + air quality data, retrains, forecasts the
-next 7 days, and serves it on a public Streamlit dashboard.
+A self-updating air quality forecasting system for six locations across Delhi. A daily automated pipeline ingests live weather and air quality data, retrains a forecasting model, and publishes a 7-day AQI forecast to a public dashboard — with no manual intervention required.
+
+**Live demo:** [add your Streamlit Cloud URL here]
+**Source notebook (original EDA/modeling):** `notebooks/original_notebook.ipynb`
+
+---
+
+## Table of contents
+
+- [Overview](#overview)
+- [Screenshots](#screenshots)
+- [Architecture](#architecture)
+- [Methodology](#methodology)
+- [Results](#results)
+- [Tech stack](#tech-stack)
+- [Project structure](#project-structure)
+- [Setup](#setup)
+- [Automation](#automation)
+- [Deployment](#deployment)
+- [Known limitations](#known-limitations)
+- [Future work](#future-work)
+- [Data sources](#data-sources)
+
+---
+
+## Overview
+
+Most air quality forecasting projects end at a static notebook trained once on historical data. This project instead runs as a continuously operating system:
+
+- A scheduled job fetches live weather and air quality data every day
+- History accumulates in a versioned data store rather than being discarded
+- A forecasting model retrains daily on the growing dataset
+- A public dashboard displays current conditions and a 7-day forecast per location, refreshing automatically as new data and predictions land
+
+The goal was to practice the full lifecycle of a forecasting product — data engineering, model design, automation, and deployment — rather than only the modeling step.
+
+## Screenshots
+
+<!-- Add your own screenshots here, e.g.: -->
+<!-- ![Dashboard overview](assets/dashboard-overview.png) -->
+<!-- ![7-day forecast cards](assets/forecast-cards.png) -->
+
+Add screenshots of the running dashboard to the `assets/` folder and reference them above.
+
+## Architecture
 
 ```
-Live weather + AQI APIs  ->  Daily ingestion job  ->  Time-series store
-        ->  Forecast model (7-day)  ->  Live dashboard
+Live weather + air quality APIs (Open-Meteo)
+            │
+            ▼
+   Daily ingestion job (GitHub Actions)
+            │
+            ▼
+   Time-series data store (Parquet)
+            │
+            ▼
+   Forecast models — one XGBoost model
+   per location per horizon (24h–168h)
+            │
+            ▼
+      Live dashboard (Streamlit)
 ```
 
-## What's already built
+<!-- Optionally replace the block above with an image, e.g.: -->
+<!-- ![Architecture diagram](assets/architecture-diagram.png) -->
 
-| File | What it does |
-|---|---|
-| `src/config.py` | Locations, feature lists, horizons, AQI color bands — single source of truth |
-| `src/features.py` | Feature engineering (lags, rolling means, cyclical time features), tested and working |
-| `src/ingest.py` | Pulls live data from Open-Meteo (weather + air quality), appends to archive |
-| `src/train.py` | Trains one XGBoost model per location per forecast horizon (24h ... 168h) |
-| `src/forecast.py` | Produces the next-7-days forecast using live weather forecasts as input |
-| `app.py` | Streamlit dashboard: current conditions, AQI badge, 7-day cards, trend charts |
-| `.github/workflows/ingest.yml` | Runs `ingest.py` daily via GitHub Actions (free) |
-| `.github/workflows/retrain.yml` | Runs `train.py` + `forecast.py` daily |
+Two independent scheduled workflows keep the system current:
 
-`src/features.py` has been tested end-to-end with synthetic data (feature
-shapes, training matrix, inference row alignment all verified). **The API
-calls in `ingest.py` and `forecast.py` have not been tested against the live
-internet** — I built this in a sandboxed environment with no network access,
-so those are written carefully against Open-Meteo's documented response
-format but need a real run to confirm. That's step 1 below.
+| Workflow | Schedule | Responsibility |
+|---|---|---|
+| `ingest.yml` | Daily | Fetch latest weather + air quality data, append to the archive |
+| `retrain.yml` | Daily | Retrain all models on updated history, regenerate the 7-day forecast |
 
-## Why this design
+Both commit their output back to the repository, which triggers an automatic redeploy of the connected Streamlit app — so the public dashboard reflects new data without any manual step.
 
-- **Open-Meteo** for both weather and air quality: completely free, no API
-  key, and its air quality endpoint returns a `us_aqi` field, used here as
-  the `aqi_index` target. Swap in a CPCB/WAQI feed later if you want the
-  official Indian AQI scale instead — `config.py` and `ingest.py` are the
-  only two files that would need to change.
-- **Direct multi-horizon models** (7 separate models per location, one per
-  24h step) instead of recursively feeding a model its own predictions.
-  Direct models don't compound error over the week, at the cost of
-  training 7x more models — cheap for XGBoost.
-- **Full history kept, dashboard shows 30 days.** `history.parquet` is
-  never trimmed (needed for the model to learn winter stubble-burning /
-  Diwali spikes vs. monsoon lows); `last_30_days.parquet` is the small
-  slice the dashboard actually reads.
-- **One-hot text encoding of weather condition dropped.** The original
-  notebook one-hot encoded `condition_text`/`description` strings, which is
-  fragile for a live pipeline (the model would break if a live API ever
-  returns a weather description string it hasn't seen). The live version
-  uses the numeric WMO `weather_code` directly instead.
-- **Weather icons via emoji, not fetched images.** The dashboard maps
-  Open-Meteo's WMO weather codes to emoji (`src/config.py:WEATHER_CODE_MAP`)
-  instead of downloading icon assets from a CDN. Zero extra network calls,
-  no broken-image risk, identical rendering everywhere Streamlit runs.
-- **Forecast guardrail.** `forecast.py` clamps predictions to a generous
-  multiple of the recent observed AQI range, since with only a few weeks of
-  training data the model can extrapolate to implausible values. Loosen or
-  remove this once you have a few months of history and trust the model's
-  own range more. The dashboard also shows a banner while history is under
-  ~45 days, so forecasts aren't presented as more trustworthy than they are.
+## Methodology
 
-## Setup — do this first
+**Forecast target.** AQI (US EPA scale, as returned by Open-Meteo's air quality API) for six Delhi locations, at 1-hour resolution.
 
-1. **Create a new GitHub repo** and push everything in this zip to it.
+**Modeling approach: direct multi-horizon forecasting.** Rather than a single model that predicts one step ahead and feeds its own output back in recursively — which compounds error over a 7-day horizon — this project trains **seven independent models per location**, one for each horizon (24h, 48h, 72h, 96h, 120h, 144h, 168h). Each model is trained to predict AQI at `t + horizon` directly from features known at time `t`, plus the forecasted weather for `t + horizon` (using Open-Meteo's weather forecast as a proxy input, since it is available at inference time).
 
-2. **Backfill history locally** (one-time, needs internet):
-   ```bash
-   pip install -r requirements.txt
-   python src/ingest.py --past-days 30
-   ```
-   This seeds `data/history.parquet` with ~30 days of hourly data per
-   location so there's enough for lag/rolling features and a first
-   training run. If it errors, check the traceback against Open-Meteo's
-   current API docs (https://open-meteo.com/en/docs) — endpoints
-   occasionally add/rename parameters.
+**Features:**
+- Lag features (1h, 24h) and rolling means (24h, 168h) for AQI, key pollutants, and weather variables
+- Cyclical time encodings (hour-of-day, month-of-year) to capture diurnal and seasonal patterns
+- Forecasted weather (temperature, humidity, pressure, wind, weather code) at the target horizon
 
-3. **Train and forecast locally**, to confirm it all works before automating:
-   ```bash
-   python src/train.py
-   python src/forecast.py
-   ```
-   Check `models/training_report.json` for MAE per location/horizon.
+**Model:** XGBoost regression, one model per (location, horizon) pair.
 
-4. **Run the dashboard locally**:
-   ```bash
-   streamlit run app.py
-   ```
+**Evaluation:** time-ordered train/test split (no shuffling, to avoid leakage across the temporal structure); MAE and R² reported per location and horizon in `models/training_report.json` after each training run.
 
-5. **Commit the seeded `data/` and `models/` folders** so the repo has a
-   working baseline before automation takes over:
-   ```bash
-   git add data/ models/
-   git commit -m "Initial backfill + trained models"
-   git push
-   ```
+## Results
 
-6. **Enable GitHub Actions**: the two workflows in `.github/workflows/`
-   will start running on their schedule automatically once pushed (they
-   also have `workflow_dispatch`, so you can trigger them manually from
-   the Actions tab to test immediately rather than waiting for the cron).
+<!-- Fill this in from your own models/training_report.json once you have
+     a few weeks of accumulated history. Example structure: -->
 
-7. **Deploy the dashboard**: go to
-   [share.streamlit.io](https://share.streamlit.io), connect your GitHub
-   repo, point it at `app.py`. You get a free public URL
-   (`yourname-delhi-aqi.streamlit.app`) that redeploys automatically
-   whenever the repo updates — including the daily bot commits from
-   GitHub Actions, so the live site refreshes itself every day.
+| Location | Horizon | MAE | R² |
+|---|---|---|---|
+| IGI Airport | 24h | — | — |
+| IGI Airport | 168h | — | — |
+| ... | ... | ... | ... |
 
-## Things to check / likely first bugs
+*Add a short note here on how these compare to a naive baseline (e.g. "AQI in 24h = AQI now"), once implemented.*
 
-- **Open-Meteo response shape.** I wrote `ingest.py`/`forecast.py` against
-  the documented hourly JSON format, but live APIs drift — if `fetch_*`
-  throws a `KeyError`, print the raw JSON response and adjust the
-  `rename()` mapping.
-- **`MIN_ROWS_REQUIRED` in `train.py`** is set to 200 rows — with 6
-  locations and hourly data, 30 days gives ~720 rows per location, so
-  this should pass, but the `168` (7-day rolling) and `168`-hour horizon
-  features eat into that with `dropna()`. If a location has too few rows
-  after backfill, just wait a few more days of ingestion or increase
-  `--past-days` (Open-Meteo supports up to ~92 days of history this way).
-- **GitHub Actions committing back to the repo** needs the default
-  `GITHUB_TOKEN` to have write permission — if the push step fails, go to
-  repo Settings → Actions → General → Workflow permissions → "Read and
-  write permissions".
+## Tech stack
 
-## Further development ideas
+- **Data / modeling:** Python, pandas, XGBoost, scikit-learn
+- **Ingestion:** Open-Meteo APIs (weather + air quality), requests
+- **Storage:** Parquet (full history + rolling 30-day slice for the dashboard)
+- **Automation:** GitHub Actions (scheduled workflows)
+- **Dashboard:** Streamlit, Plotly
+- **Deployment:** Streamlit Community Cloud
 
-- **Model monitoring**: log daily MAE per location to a small CSV and
-  chart it on the dashboard — catches model drift over time.
-- **Alerts**: a GitHub Actions step that pings a Slack/Discord webhook
-  when a forecast crosses into "Very unhealthy" or worse.
-- **Better AQI scale**: swap Open-Meteo's `us_aqi` for a live CPCB/WAQI
-  feed to match India's official AQI bands, which differ from the US
-  scale in a few pollutant breakpoints.
-- **Confidence intervals**: train XGBoost with quantile loss (or a
-  separate model per quantile) to show a forecast range, not just a
-  point estimate.
-- **Map view**: `st.map()` or Plotly's mapbox scatter with all 6
-  locations colored by current AQI, for an at-a-glance city view.
-- **Caching/cost**: `st.cache_data(ttl=1800)` already limits re-reads;
-  if you add more locations, consider moving `history.parquet` to a
-  free-tier Postgres (Supabase) instead of committing large Parquet
-  files to git.
+## Project structure
 
-## Portfolio write-up checklist
+```
+delhi-aqi-live/
+├── data/                     # history.parquet, last_30_days.parquet, forecast.parquet
+├── src/
+│   ├── config.py              # locations, feature config, AQI bands
+│   ├── features.py            # feature engineering, shared by training and inference
+│   ├── ingest.py               # live data ingestion
+│   ├── train.py                 # per-location, per-horizon model training
+│   └── forecast.py              # 7-day forecast generation
+├── models/                    # trained model artifacts + training_report.json
+├── app.py                      # Streamlit dashboard
+├── .github/workflows/          # daily ingestion and retraining automation
+├── notebooks/                  # original exploratory notebook
+└── requirements.txt
+```
 
-- [ ] Link the live Streamlit URL at the top of this README
-- [ ] Add 2-3 dashboard screenshots
-- [ ] Note the MAE/R2 achieved per location (from `training_report.json`)
-- [ ] Explain the direct multi-horizon design choice (this README's
-      "Why this design" section is a good starting draft)
-- [ ] Link back to `notebooks/original_notebook.ipynb` as the EDA/prototype
-      that the live pipeline is based on
+## Setup
+
+```bash
+pip install -r requirements.txt
+
+# One-time backfill of history (30+ days recommended)
+python src/ingest.py --past-days 30
+
+# Train models and generate the first forecast
+python src/train.py
+python src/forecast.py
+
+# Run the dashboard locally
+streamlit run app.py
+```
+
+## Automation
+
+The pipeline runs unattended once deployed:
+
+1. Push the repository to GitHub.
+2. Under **Settings → Actions → General → Workflow permissions**, select **"Read and write permissions"** so the scheduled jobs can commit updated data back to the repo.
+3. The two workflows in `.github/workflows/` run on their own daily schedule (and can also be triggered manually from the **Actions** tab via `workflow_dispatch`).
+4. Each run commits its output — new data, retrained models, or an updated forecast — back to the repository.
+
+## Deployment
+
+1. Go to [share.streamlit.io](https://share.streamlit.io) and connect the GitHub repository.
+2. Point the app at `app.py`.
+3. Deploy — the app receives a public URL and automatically redeploys on every push, including the daily commits from GitHub Actions.
+
+## Known limitations
+
+- **Modeled, not measured, air quality data.** Open-Meteo's air quality data is a model estimate (Copernicus CAMS), not a live reading from a physical monitoring station, so values will differ from station-based sources such as CPCB or AQICN. A future iteration could swap in a real per-station API.
+- **Forecast reliability depends on accumulated history.** With only a few weeks of data, longer-horizon forecasts (120h–168h) are prone to unrealistic extrapolation, since the model has seen very few complete weekly or seasonal cycles. A sanity clamp in `forecast.py` currently bounds predictions to a plausible range as a temporary safeguard; this should be loosened once more history accumulates and the model's own extrapolation can be trusted.
+- **No confidence intervals.** Forecasts are currently point estimates only.
+
+## Future work
+
+- Baseline comparison (naive/seasonal persistence) to quantify model value over a trivial forecast
+- Walk-forward backtesting across multiple time origins, rather than a single train/test split
+- Feature importance / SHAP analysis
+- Real per-station air quality data source (e.g. WAQI/CPCB) as an alternative to the modeled Open-Meteo values
+- Quantile regression for forecast confidence intervals
+- Automated model-drift monitoring (tracking MAE over time)
+
+## Data sources
+
+- [Open-Meteo Weather API](https://open-meteo.com/en/docs) — historical and forecast weather data
+- [Open-Meteo Air Quality API](https://open-meteo.com/en/docs/air-quality-api) — historical and current air quality data
