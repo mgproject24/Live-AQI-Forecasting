@@ -1,0 +1,30 @@
+name: Daily retrain and forecast
+
+on:
+  schedule:
+    - cron: "30 3 * * *"   # 09:00 IST, 30 min after ingest.yml
+  workflow_dispatch: {}
+
+jobs:
+  retrain:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install -r requirements.txt
+
+      - run: python src/train.py
+
+      - run: python src/forecast.py
+
+      - name: Commit updated models and forecast
+        run: |
+          git config user.name "aqi-bot"
+          git config user.email "aqi-bot@users.noreply.github.com"
+          git add models/ data/forecast.parquet
+          git diff --cached --quiet || git commit -m "Daily retrain + forecast [skip ci]"
+          git push
