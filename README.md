@@ -1,8 +1,8 @@
-# India AQI — Live 7-Day Forecast
+# Delhi AQI — Live 7-Day Forecast
 
-A self-updating air quality forecasting system covering 48 locations across India (originally scoped to 6 Delhi stations, expanded to a nationwide map). A daily automated pipeline ingests live weather and air quality data, retrains a forecasting model, and publishes a 7-day AQI forecast per location on a public dashboard — with no manual intervention required.
+A self-updating air quality forecasting system for six locations across Delhi. A daily automated pipeline ingests live weather and air quality data, retrains a forecasting model, and publishes a 7-day AQI forecast to a public dashboard — with no manual intervention required.
 
-**Live demo:** [add your Streamlit Cloud URL here]
+**Live demo:** [https://live-aqi-forecasting-qwmfvuvaad96qqsqcaguo9.streamlit.app/]
 **Source notebook (original EDA/modeling):** `notebooks/original_notebook.ipynb`
 
 ---
@@ -39,10 +39,22 @@ The goal was to practice the full lifecycle of a forecasting product — data en
 ## Screenshots
 
 <!-- Add your own screenshots here, e.g.: -->
-<!-- ![Dashboard overview](assets/dashboard-overview.png) -->
-<!-- ![7-day forecast cards](assets/forecast-cards.png) -->
+**Dashboard overview**
 
-Add screenshots of the running dashboard to the `assets/` folder and reference them above.
+![Dashboard overview](assets/ss_1.png)
+
+**7-day forecast cards**
+
+![7-day forecast cards](assets/ss_2.png)
+
+**Forecast Graph**
+
+![Forecast Graph](assets/ss_3.png)
+
+**Currant AQI**
+
+![Currant AQI](assets/ss_4.png)
+
 
 ## Architecture
 
@@ -101,7 +113,6 @@ Both commit their output back to the repository, which triggers an automatic red
 | IGI Airport | 168h | — | — |
 | ... | ... | ... | ... |
 
-*Add a short note here on how these compare to a naive baseline (e.g. "AQI in 24h = AQI now"), once implemented.*
 
 ## Tech stack
 
