@@ -4,6 +4,7 @@ import sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "src"))
 
 import pandas as pd
+import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 
@@ -14,7 +15,7 @@ BAND_HEX = {
     "red": "#E5484D", "pink": "#D6409F", "gray": "#8B949E",
 }
 
-st.set_page_config(page_title="Delhi AQI - live forecast", layout="wide", page_icon="\U0001F32B\ufe0f")
+st.set_page_config(page_title="India AQI - live forecast", layout="wide", page_icon="\U0001F32B\ufe0f")
 
 # ---------------------------------------------------------------------------
 # Dark, MSN-weather-style theme
@@ -66,7 +67,7 @@ def load_data():
 
 last_30, forecast = load_data()
 
-st.markdown("### \U0001F32B\ufe0f Delhi AQI \u2014 live forecast")
+st.markdown("### \U0001F32B\ufe0f India AQI \u2014 live forecast")
 
 if last_30.empty:
     st.info(
@@ -204,23 +205,50 @@ with tab2:
 st.markdown("---")
 
 # ---------------------------------------------------------------------------
-# All locations overview
+# All locations overview — map
 # ---------------------------------------------------------------------------
 st.markdown("#### All locations \u2014 current AQI")
+
+map_rows = []
 for loc in LOCATIONS:
     d = last_30[last_30["location"] == loc]
     if d.empty:
         continue
     latest_row = d.sort_values("timestamp").iloc[-1]
     lbl, ck = aqi_category(latest_row["aqi_index"])
-    hx = BAND_HEX.get(ck, "#8B949E")
-    ic, _ = weather_icon(latest_row.get("weather_code"))
-    st.markdown(f"""
-    <div class="loc-row">
-      <div style="display:flex;align-items:center;gap:10px">
-        <span style="font-size:20px">{ic}</span>
-        <span style="font-weight:500">{loc}</span>
-      </div>
-      <span class="aqi-pill" style="background:{hx}22;color:{hx}">{latest_row['aqi_index']:.0f} \u00b7 {lbl}</span>
-    </div>
-    """, unsafe_allow_html=True)
+    lat, lon = LOCATIONS[loc]
+    map_rows.append({
+        "Location": loc, "AQI": round(float(latest_row["aqi_index"])),
+        "Category": lbl, "lat": lat, "lon": lon,
+    })
+
+if map_rows:
+    map_df = pd.DataFrame(map_rows)
+    fig_map = px.scatter_mapbox(
+        map_df, lat="lat", lon="lon",
+        color="AQI", size=[16] * len(map_df),
+        color_continuous_scale=["#3FB950", "#D4A72C", "#E8833A", "#E5484D", "#D6409F", "#8B949E"],
+        range_color=[0, 400],
+        hover_name="Location",
+        hover_data={"AQI": True, "Category": True, "lat": False, "lon": False},
+        zoom=3.6, center=dict(lat=22.5, lon=80),
+        height=520,
+    )
+    fig_map.update_layout(
+        mapbox_style="carto-darkmatter",
+        paper_bgcolor="rgba(0,0,0,0)",
+        margin=dict(l=0, r=0, t=0, b=0),
+    )
+    st.plotly_chart(fig_map, width='stretch')
+
+    with st.expander("View as list"):
+        for row in map_rows:
+            hx = BAND_HEX.get(aqi_category(row["AQI"])[1], "#8B949E")
+            st.markdown(f"""
+            <div class="loc-row">
+              <span style="font-weight:500">{row['Location']}</span>
+              <span class="aqi-pill" style="background:{hx}22;color:{hx}">{row['AQI']} \u00b7 {row['Category']}</span>
+            </div>
+            """, unsafe_allow_html=True)
+else:
+    st.info("No location data available yet.")

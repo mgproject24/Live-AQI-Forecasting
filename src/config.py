@@ -21,16 +21,68 @@ DATA_DIR.mkdir(parents=True, exist_ok=True)
 MODELS_DIR.mkdir(parents=True, exist_ok=True)
 
 # ---------------------------------------------------------------------------
-# Monitored locations (approximate coordinates for the 6 Delhi stations used
-# in the original dataset). Edit/add freely.
+# Monitored locations. Started as 6 Delhi stations; expanded to a curated
+# set of major Indian cities so the dashboard can show a national map.
+# Open-Meteo works for any lat/lon (it's not station-based), so this list
+# is just "cities we've chosen to track" — add or remove freely. Keep in
+# mind: every location here costs 2 extra API calls per ingestion run
+# (weather + air quality), so a few dozen is fine, but don't go wild —
+# a few hundred would start stretching GitHub Actions' free run time.
 # ---------------------------------------------------------------------------
 LOCATIONS = {
-    "IGI Airport":       (28.5562, 77.1000),
-    "Anand Vihar":       (28.6469, 77.3151),
-    "Connaught Place":   (28.6315, 77.2167),
-    "Dwarka":            (28.5921, 77.0460),
-    "Okhla Phase III":   (28.5355, 77.2910),
-    "Rohini":            (28.7041, 77.1025),
+    # Delhi NCR — original 6 stations, plus a few more real CPCB station areas
+    "IGI Airport":         (28.5562, 77.1000),
+    "Anand Vihar":         (28.6469, 77.3151),
+    "Connaught Place":     (28.6315, 77.2167),
+    "Dwarka":              (28.5921, 77.0460),
+    "Okhla Phase III":     (28.5355, 77.2910),
+    "Rohini":              (28.7041, 77.1025),
+    "ITO":                 (28.6289, 77.2405),
+    "Punjabi Bagh":        (28.6692, 77.1174),
+    "R K Puram":           (28.5645, 77.1730),
+    "Jahangirpuri":        (28.7286, 77.1633),
+
+    # Major metros
+    "Mumbai":              (19.0760, 72.8777),
+    "Bengaluru":           (12.9716, 77.5946),
+    "Chennai":             (13.0827, 80.2707),
+    "Kolkata":             (22.5726, 88.3639),
+    "Hyderabad":           (17.3850, 78.4867),
+    "Pune":                (18.5204, 73.8567),
+    "Ahmedabad":           (23.0225, 72.5714),
+
+    # State capitals / large cities
+    "Jaipur":              (26.9124, 75.7873),
+    "Lucknow":             (26.8467, 80.9462),
+    "Kanpur":              (26.4499, 80.3319),
+    "Nagpur":              (21.1458, 79.0882),
+    "Indore":              (22.7196, 75.8577),
+    "Bhopal":              (23.2599, 77.4126),
+    "Patna":               (25.5941, 85.1376),
+    "Ludhiana":            (30.9010, 75.8573),
+    "Agra":                (27.1767, 78.0081),
+    "Nashik":              (19.9975, 73.7898),
+    "Vadodara":            (22.3072, 73.1812),
+    "Surat":               (21.1702, 72.8311),
+    "Rajkot":              (22.3039, 70.8022),
+    "Varanasi":            (25.3176, 82.9739),
+    "Amritsar":            (31.6340, 74.8723),
+    "Chandigarh":          (30.7333, 76.7794),
+    "Guwahati":            (26.1445, 91.7362),
+    "Bhubaneswar":         (20.2961, 85.8245),
+    "Coimbatore":          (11.0168, 76.9558),
+    "Kochi":               (9.9312, 76.2673),
+    "Thiruvananthapuram":  (8.5241, 76.9366),
+    "Visakhapatnam":       (17.6868, 83.2185),
+    "Vijayawada":          (16.5062, 80.6480),
+    "Ranchi":              (23.3441, 85.3096),
+    "Jamshedpur":          (22.8046, 86.2029),
+    "Dehradun":            (30.3165, 78.0322),
+    "Shimla":              (31.1048, 77.1734),
+    "Srinagar":            (34.0837, 74.7973),
+    "Jodhpur":             (26.2389, 73.0243),
+    "Gwalior":             (26.2183, 78.1828),
+    "Raipur":              (21.2514, 81.6296),
 }
 
 # ---------------------------------------------------------------------------
@@ -80,56 +132,10 @@ def aqi_category(value: float):
 
 
 # ---------------------------------------------------------------------------
-# Weather icons — mapped from Open-Meteo's WMO weather_code, using plain
-# emoji glyphs (renders everywhere, no external assets/licensing to worry
-# about, no network call needed).
-# ---------------------------------------------------------------------------
-WEATHER_CODE_MAP = {
-    0: ("\u2600\ufe0f", "Clear sky"),
-    1: ("\U0001F324\ufe0f", "Mainly clear"),
-    2: ("\u26c5", "Partly cloudy"),
-    3: ("\u2601\ufe0f", "Overcast"),
-    45: ("\U0001F32B\ufe0f", "Fog"),
-    48: ("\U0001F32B\ufe0f", "Depositing rime fog"),
-    51: ("\U0001F326\ufe0f", "Light drizzle"),
-    53: ("\U0001F326\ufe0f", "Moderate drizzle"),
-    55: ("\U0001F327\ufe0f", "Dense drizzle"),
-    56: ("\U0001F327\ufe0f", "Light freezing drizzle"),
-    57: ("\U0001F327\ufe0f", "Dense freezing drizzle"),
-    61: ("\U0001F327\ufe0f", "Slight rain"),
-    63: ("\U0001F327\ufe0f", "Moderate rain"),
-    65: ("\U0001F327\ufe0f", "Heavy rain"),
-    66: ("\U0001F327\ufe0f", "Light freezing rain"),
-    67: ("\U0001F327\ufe0f", "Heavy freezing rain"),
-    71: ("\U0001F328\ufe0f", "Slight snow"),
-    73: ("\U0001F328\ufe0f", "Moderate snow"),
-    75: ("\u2744\ufe0f", "Heavy snow"),
-    77: ("\u2744\ufe0f", "Snow grains"),
-    80: ("\U0001F326\ufe0f", "Slight showers"),
-    81: ("\U0001F327\ufe0f", "Moderate showers"),
-    82: ("\u26c8\ufe0f", "Violent showers"),
-    85: ("\U0001F328\ufe0f", "Slight snow showers"),
-    86: ("\u2744\ufe0f", "Heavy snow showers"),
-    95: ("\u26c8\ufe0f", "Thunderstorm"),
-    96: ("\u26c8\ufe0f", "Thunderstorm with slight hail"),
-    99: ("\u26c8\ufe0f", "Thunderstorm with heavy hail"),
-}
-
-
-def weather_icon(code):
-    """Return (emoji, description) for a WMO weather code."""
-    try:
-        code = int(code)
-    except (TypeError, ValueError):
-        return "\u2753", "Unknown"
-    return WEATHER_CODE_MAP.get(code, ("\u2753", "Unknown"))
-
-
-# ---------------------------------------------------------------------------
 # WMO weather codes (used by Open-Meteo) -> emoji icon + short label.
 # Using emoji instead of fetched image icons means the dashboard renders
 # identically offline, in CI, and on any deployment target with zero extra
-# network calls or asset hosting.
+# network calls or asset hosting/licensing to worry about.
 # ---------------------------------------------------------------------------
 WEATHER_CODE_MAP = {
     0: ("\u2600\ufe0f", "Clear sky"),
