@@ -40,15 +40,19 @@ The goal was to practice the full lifecycle of a forecasting product — data en
 
 <!-- Add your own screenshots here, e.g.: -->
 **Dashboard overview**
+
 ![Dashboard overview](assets/ss_1.png)
 
 **7-day forecast cards**
+
 ![7-day forecast cards](assets/ss_2.png)
 
 **Forecast Graph**
+
 ![Forecast Graph](assets/ss_3.png)
 
 **Currant AQI**
+
 ![Currant AQI](assets/ss_4.png)
 
 
