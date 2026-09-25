@@ -2,7 +2,7 @@
 
 A self-updating air quality forecasting system covering 48 locations across India (originally scoped to 6 Delhi stations, expanded to a nationwide map). A daily automated pipeline ingests live weather and air quality data, retrains a forecasting model, and publishes a 7-day AQI forecast per location on a public dashboard — with no manual intervention required.
 
-**Live demo:** [add your Streamlit Cloud URL here]
+**Live demo:** (https://live-aqi-forecasting-qwmfvuvaad96qqsqcaguo9.streamlit.app/)
 **Source notebook (original EDA/modeling):** `notebooks/original_notebook.ipynb`
 
 ---
