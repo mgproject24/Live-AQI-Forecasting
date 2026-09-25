@@ -147,6 +147,11 @@ if not loc_fc.empty:
         f_hex = BAND_HEX.get(f_color_key, "#8B949E")
         f_icon, _ = weather_icon(row.get("weather_code"))
         temp_txt = f"{row['temp_c']:.0f}\u00b0" if pd.notna(row.get("temp_c")) else ""
+        has_interval = pd.notna(row.get("predicted_aqi_lower")) and pd.notna(row.get("predicted_aqi_upper"))
+        interval_txt = (
+            f"{row['predicted_aqi_lower']:.0f}\u2013{row['predicted_aqi_upper']:.0f}"
+            if has_interval else ""
+        )
         with c:
             st.markdown(f"""
             <div class="forecast-card">
@@ -156,10 +161,17 @@ if not loc_fc.empty:
               <div style="font-size:13px;color:#C9D1D9">{temp_txt}</div>
               <div style="font-size:16px;font-weight:700;color:{f_hex};margin-top:4px">{row['predicted_aqi']:.0f}</div>
               <div style="font-size:10px;color:{f_hex}">{f_label}</div>
+              <div style="font-size:9px;color:#5B6478;margin-top:2px">{interval_txt}</div>
             </div>
             """, unsafe_allow_html=True)
 else:
     st.info("No forecast yet. Run `python src/train.py` then `python src/forecast.py`.")
+
+st.caption(
+    "Shaded ranges are 90% prediction intervals from backtested model error, "
+    "not a guarantee - a wider range means the model has been less consistently "
+    "accurate at that horizon historically."
+)
 
 st.markdown("---")
 
@@ -185,6 +197,18 @@ with tab1:
         line=dict(color="#5FA8FF", width=2),
     ))
     if not loc_fc.empty:
+        has_interval = loc_fc["predicted_aqi_lower"].notna().all() and loc_fc["predicted_aqi_upper"].notna().all()
+        if has_interval:
+            fig.add_trace(go.Scatter(
+                x=loc_fc["target_time"], y=loc_fc["predicted_aqi_lower"],
+                mode="lines", line=dict(width=0), showlegend=False, hoverinfo="skip",
+            ))
+            fig.add_trace(go.Scatter(
+                x=loc_fc["target_time"], y=loc_fc["predicted_aqi_upper"],
+                mode="lines", line=dict(width=0), fill="tonexty",
+                fillcolor="rgba(245,200,66,0.15)", name="90% prediction interval",
+                hoverinfo="skip",
+            ))
         fig.add_trace(go.Scatter(
             x=loc_fc["target_time"], y=loc_fc["predicted_aqi"],
             name="7-day forecast", mode="lines+markers",
@@ -224,22 +248,31 @@ for loc in LOCATIONS:
 
 if map_rows:
     map_df = pd.DataFrame(map_rows)
-    fig_map = px.scatter_mapbox(
-        map_df, lat="lat", lon="lon",
-        color="AQI", size=[16] * len(map_df),
-        color_continuous_scale=["#3FB950", "#D4A72C", "#E8833A", "#E5484D", "#D6409F", "#8B949E"],
-        range_color=[0, 400],
-        hover_name="Location",
-        hover_data={"AQI": True, "Category": True, "lat": False, "lon": False},
-        zoom=3.6, center=dict(lat=22.5, lon=80),
-        height=520,
-    )
-    fig_map.update_layout(
-        mapbox_style="carto-darkmatter",
-        paper_bgcolor="rgba(0,0,0,0)",
-        margin=dict(l=0, r=0, t=0, b=0),
-    )
-    st.plotly_chart(fig_map, width='stretch')
+    map_df["marker_size"] = 16
+    try:
+        fig_map = px.scatter_map(
+            map_df, lat="lat", lon="lon",
+            color="AQI", size="marker_size", size_max=16,
+            color_continuous_scale=["#3FB950", "#D4A72C", "#E8833A", "#E5484D", "#D6409F", "#8B949E"],
+            range_color=[0, 400],
+            hover_name="Location",
+            hover_data={"AQI": True, "Category": True, "lat": False, "lon": False, "marker_size": False},
+            zoom=3.6, center=dict(lat=22.5, lon=80),
+            height=520,
+            map_style="carto-darkmatter",
+        )
+        fig_map.update_layout(
+            paper_bgcolor="rgba(0,0,0,0)",
+            margin=dict(l=0, r=0, t=0, b=0),
+        )
+        st.plotly_chart(fig_map, width='stretch')
+    except Exception as e:  # noqa: BLE001
+        # Map rendering depends on Plotly/Mapbox internals that can break
+        # across version upgrades. Never let that take the whole dashboard
+        # down — fall back to the list view below instead.
+        st.info("Map view is temporarily unavailable. Showing the list view instead.")
+        if os.environ.get("AQI_DEBUG"):
+            st.exception(e)
 
     with st.expander("View as list"):
         for row in map_rows:

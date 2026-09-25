@@ -5,6 +5,10 @@ on:
     - cron: "30 3 * * *"   # 09:00 IST, 30 min after ingest.yml
   workflow_dispatch: {}
 
+permissions:
+  contents: write
+  issues: write
+
 jobs:
   retrain:
     runs-on: ubuntu-latest
@@ -21,6 +25,9 @@ jobs:
 
       - run: python src/forecast.py
 
+      - name: Check for model drift / repeated promotion rejections
+        run: python src/monitor.py
+
       - name: Commit updated models and forecast
         run: |
           git config user.name "aqi-bot"
@@ -28,3 +35,52 @@ jobs:
           git add models/ data/forecast.parquet
           git diff --cached --quiet || git commit -m "Daily retrain + forecast [skip ci]"
           git push
+
+      - name: Open/update a GitHub issue if the monitor found alerts
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = 'models/monitor_report.json';
+            if (!fs.existsSync(path)) {
+              console.log('No monitor report found, skipping.');
+              return;
+            }
+            const report = JSON.parse(fs.readFileSync(path, 'utf8'));
+            if (!report.alerts || report.alerts.length === 0) {
+              console.log('No alerts - nothing to do.');
+              return;
+            }
+
+            const bodyLines = report.alerts.map(
+              a => `- **[${a.type}]** ${a.location} (h=${a.horizon}h): ${a.detail}`
+            );
+            const body = `The daily model monitor found ${report.alerts.length} issue(s) ` +
+              `as of ${report.generated_at}:\n\n${bodyLines.join('\n')}\n\n` +
+              `See \`models/monitor_report.json\` in the repo for the full report.`;
+
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'model-monitor',
+            });
+
+            if (existing.data.length > 0) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.data[0].number,
+                body: `Update:\n\n${body}`,
+              });
+              console.log('Commented on existing issue #' + existing.data[0].number);
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: 'Automated model monitor alert',
+                body,
+                labels: ['model-monitor'],
+              });
+              console.log('Created new monitor alert issue.');
+            }

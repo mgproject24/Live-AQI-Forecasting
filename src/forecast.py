@@ -84,12 +84,25 @@ def forecast_location(location: str, df_loc: pd.DataFrame, lat: float, lon: floa
         lower_bound = max(0.0, recent_min * 0.5)
         pred = min(max(pred, lower_bound), upper_bound)
 
+        # Prediction interval via conformal calibration (see train.py) -
+        # a fixed half-width from backtest residual quantiles, clamped
+        # into the same plausible range as the point forecast so the
+        # band can't be wider than the guardrail above allows.
+        interval_90 = bundle["metrics"].get("interval_90_halfwidth")
+        if interval_90 is not None:
+            pred_lower = max(lower_bound, pred - interval_90)
+            pred_upper = min(upper_bound, pred + interval_90)
+        else:
+            pred_lower, pred_upper = None, None
+
         rows.append({
             "location": location,
             "issued_at": now,
             "target_time": target_time,
             "horizon_hours": horizon,
             "predicted_aqi": max(0.0, pred),
+            "predicted_aqi_lower": pred_lower,
+            "predicted_aqi_upper": pred_upper,
             "temp_c": fw["temp_c"],
             "humidity": fw["humidity"],
             "windspeed_kph": fw["windspeed_kph"],
