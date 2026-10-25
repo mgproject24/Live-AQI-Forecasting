@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-24T08:44:16.476658+00:00",
-  "n_experiment_records": 10080,
+  "generated_at": "2026-10-25T08:51:38.281649+00:00",
+  "n_experiment_records": 10416,
   "n_location_horizon_pairs_tracked": 336,
   "alerts": [
     {
       "type": "cumulative_drift",
       "location": "IGI Airport",
       "horizon": 24,
-      "detail": "MAE drifted from 102.39 to 157.80 over the last 7 runs (54% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 99.06 to 157.80 over the last 7 runs (59% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
@@ -19,25 +19,25 @@
       "type": "cumulative_drift",
       "location": "IGI Airport",
       "horizon": 72,
-      "detail": "MAE drifted from 132.12 to 169.74 over the last 7 runs (28% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 129.70 to 163.96 over the last 7 runs (26% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "IGI Airport",
       "horizon": 96,
-      "detail": "MAE drifted from 134.95 to 178.11 over the last 7 runs (32% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 131.59 to 164.93 over the last 7 runs (25% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Anand Vihar",
       "horizon": 96,
-      "detail": "MAE drifted from 49.09 to 65.38 over the last 7 runs (33% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 49.09 to 62.22 over the last 7 runs (27% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Connaught Place",
       "horizon": 96,
-      "detail": "MAE drifted from 53.89 to 69.19 over the last 7 runs (28% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 47.73 to 66.66 over the last 7 runs (40% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
@@ -59,6 +59,12 @@
     },
     {
       "type": "cumulative_drift",
+      "location": "Dwarka",
+      "horizon": 96,
+      "detail": "MAE drifted from 133.56 to 167.00 over the last 7 runs (25% worse) - no single run tripped the promotion gate, but the trend is real."
+    },
+    {
+      "type": "cumulative_drift",
       "location": "Okhla Phase III",
       "horizon": 24,
       "detail": "MAE drifted from 97.80 to 155.63 over the last 7 runs (59% worse) - no single run tripped the promotion gate, but the trend is real."
@@ -77,15 +83,9 @@
     },
     {
       "type": "cumulative_drift",
-      "location": "ITO",
-      "horizon": 24,
-      "detail": "MAE drifted from 33.29 to 46.07 over the last 7 runs (38% worse) - no single run tripped the promotion gate, but the trend is real."
-    },
-    {
-      "type": "cumulative_drift",
       "location": "R K Puram",
       "horizon": 24,
-      "detail": "MAE drifted from 122.58 to 175.59 over the last 7 runs (43% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 122.58 to 172.64 over the last 7 runs (41% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
@@ -109,67 +109,73 @@
       "type": "cumulative_drift",
       "location": "Mumbai",
       "horizon": 48,
-      "detail": "MAE drifted from 23.27 to 32.74 over the last 7 runs (41% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 23.27 to 31.90 over the last 7 runs (37% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Mumbai",
       "horizon": 72,
-      "detail": "MAE drifted from 26.22 to 34.06 over the last 7 runs (30% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 25.84 to 33.77 over the last 7 runs (31% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Mumbai",
       "horizon": 96,
-      "detail": "MAE drifted from 26.08 to 36.76 over the last 7 runs (41% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 25.96 to 35.68 over the last 7 runs (37% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Mumbai",
       "horizon": 120,
-      "detail": "MAE drifted from 28.33 to 37.49 over the last 7 runs (32% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 27.19 to 37.42 over the last 7 runs (38% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Mumbai",
       "horizon": 144,
-      "detail": "MAE drifted from 25.71 to 32.85 over the last 7 runs (28% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 25.39 to 32.23 over the last 7 runs (27% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Mumbai",
       "horizon": 168,
-      "detail": "MAE drifted from 21.64 to 31.95 over the last 7 runs (48% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 21.57 to 31.17 over the last 7 runs (45% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Kolkata",
       "horizon": 24,
-      "detail": "MAE drifted from 22.24 to 31.67 over the last 7 runs (42% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 20.30 to 26.97 over the last 7 runs (33% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Hyderabad",
       "horizon": 24,
-      "detail": "MAE drifted from 14.43 to 18.57 over the last 7 runs (29% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 14.33 to 18.28 over the last 7 runs (28% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Hyderabad",
       "horizon": 48,
-      "detail": "MAE drifted from 15.20 to 19.72 over the last 7 runs (30% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 13.82 to 18.25 over the last 7 runs (32% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Pune",
       "horizon": 24,
-      "detail": "MAE drifted from 16.20 to 25.18 over the last 7 runs (55% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 16.20 to 25.06 over the last 7 runs (55% worse) - no single run tripped the promotion gate, but the trend is real."
+    },
+    {
+      "type": "cumulative_drift",
+      "location": "Ahmedabad",
+      "horizon": 24,
+      "detail": "MAE drifted from 12.36 to 15.46 over the last 7 runs (25% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Ahmedabad",
       "horizon": 48,
-      "detail": "MAE drifted from 15.32 to 26.57 over the last 7 runs (73% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 15.29 to 23.24 over the last 7 runs (52% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
@@ -187,49 +193,67 @@
       "type": "cumulative_drift",
       "location": "Ahmedabad",
       "horizon": 120,
-      "detail": "MAE drifted from 15.11 to 26.74 over the last 7 runs (77% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 14.56 to 23.98 over the last 7 runs (65% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Ahmedabad",
       "horizon": 144,
-      "detail": "MAE drifted from 16.48 to 23.16 over the last 7 runs (40% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 16.48 to 22.35 over the last 7 runs (36% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Ahmedabad",
       "horizon": 168,
-      "detail": "MAE drifted from 16.65 to 21.10 over the last 7 runs (27% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 16.39 to 20.86 over the last 7 runs (27% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Lucknow",
       "horizon": 72,
-      "detail": "MAE drifted from 27.86 to 39.30 over the last 7 runs (41% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 27.86 to 38.67 over the last 7 runs (39% worse) - no single run tripped the promotion gate, but the trend is real."
+    },
+    {
+      "type": "cumulative_drift",
+      "location": "Kanpur",
+      "horizon": 48,
+      "detail": "MAE drifted from 26.83 to 33.69 over the last 7 runs (26% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Kanpur",
       "horizon": 72,
-      "detail": "MAE drifted from 26.14 to 33.67 over the last 7 runs (29% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 24.53 to 33.67 over the last 7 runs (37% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Kanpur",
       "horizon": 96,
-      "detail": "MAE drifted from 26.56 to 34.58 over the last 7 runs (30% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 26.53 to 34.44 over the last 7 runs (30% worse) - no single run tripped the promotion gate, but the trend is real."
+    },
+    {
+      "type": "cumulative_drift",
+      "location": "Kanpur",
+      "horizon": 120,
+      "detail": "MAE drifted from 28.99 to 36.55 over the last 7 runs (26% worse) - no single run tripped the promotion gate, but the trend is real."
+    },
+    {
+      "type": "cumulative_drift",
+      "location": "Nagpur",
+      "horizon": 48,
+      "detail": "MAE drifted from 17.14 to 22.42 over the last 7 runs (31% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Nagpur",
       "horizon": 72,
-      "detail": "MAE drifted from 18.00 to 24.25 over the last 7 runs (35% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 17.71 to 24.25 over the last 7 runs (37% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Nagpur",
       "horizon": 96,
-      "detail": "MAE drifted from 18.46 to 26.35 over the last 7 runs (43% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 18.46 to 26.24 over the last 7 runs (42% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
@@ -241,55 +265,55 @@
       "type": "cumulative_drift",
       "location": "Indore",
       "horizon": 24,
-      "detail": "MAE drifted from 11.01 to 14.96 over the last 7 runs (36% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 11.01 to 14.22 over the last 7 runs (29% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Indore",
       "horizon": 48,
-      "detail": "MAE drifted from 13.15 to 17.54 over the last 7 runs (33% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 12.70 to 16.61 over the last 7 runs (31% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Indore",
       "horizon": 72,
-      "detail": "MAE drifted from 13.05 to 18.51 over the last 7 runs (42% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 12.83 to 18.33 over the last 7 runs (43% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Indore",
       "horizon": 96,
-      "detail": "MAE drifted from 12.34 to 18.13 over the last 7 runs (47% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 12.34 to 17.73 over the last 7 runs (44% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Indore",
       "horizon": 120,
-      "detail": "MAE drifted from 12.33 to 17.88 over the last 7 runs (45% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 12.04 to 17.13 over the last 7 runs (42% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Indore",
       "horizon": 144,
-      "detail": "MAE drifted from 11.28 to 18.20 over the last 7 runs (61% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 11.28 to 17.50 over the last 7 runs (55% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Indore",
       "horizon": 168,
-      "detail": "MAE drifted from 11.52 to 19.49 over the last 7 runs (69% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 11.44 to 19.49 over the last 7 runs (70% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Bhopal",
       "horizon": 24,
-      "detail": "MAE drifted from 9.01 to 15.43 over the last 7 runs (71% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 9.01 to 14.81 over the last 7 runs (64% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Bhopal",
       "horizon": 48,
-      "detail": "MAE drifted from 11.49 to 16.21 over the last 7 runs (41% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 11.14 to 16.21 over the last 7 runs (45% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
@@ -301,55 +325,55 @@
       "type": "cumulative_drift",
       "location": "Bhopal",
       "horizon": 96,
-      "detail": "MAE drifted from 13.48 to 18.49 over the last 7 runs (37% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 13.48 to 17.98 over the last 7 runs (33% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Bhopal",
       "horizon": 120,
-      "detail": "MAE drifted from 12.42 to 18.60 over the last 7 runs (50% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 12.18 to 18.23 over the last 7 runs (50% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Bhopal",
       "horizon": 144,
-      "detail": "MAE drifted from 12.90 to 18.35 over the last 7 runs (42% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 12.90 to 17.76 over the last 7 runs (38% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Ludhiana",
       "horizon": 24,
-      "detail": "MAE drifted from 22.73 to 31.69 over the last 7 runs (39% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 22.73 to 31.00 over the last 7 runs (36% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Ludhiana",
       "horizon": 48,
-      "detail": "MAE drifted from 30.07 to 49.66 over the last 7 runs (65% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 29.86 to 47.67 over the last 7 runs (60% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Ludhiana",
       "horizon": 72,
-      "detail": "MAE drifted from 29.42 to 49.28 over the last 7 runs (67% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 28.03 to 46.84 over the last 7 runs (67% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Ludhiana",
       "horizon": 96,
-      "detail": "MAE drifted from 27.18 to 55.54 over the last 7 runs (104% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 26.95 to 54.56 over the last 7 runs (102% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Ludhiana",
       "horizon": 120,
-      "detail": "MAE drifted from 28.89 to 58.86 over the last 7 runs (104% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 28.89 to 58.20 over the last 7 runs (101% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Ludhiana",
       "horizon": 144,
-      "detail": "MAE drifted from 25.76 to 61.94 over the last 7 runs (140% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 25.30 to 60.94 over the last 7 runs (141% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
@@ -361,25 +385,25 @@
       "type": "cumulative_drift",
       "location": "Agra",
       "horizon": 144,
-      "detail": "MAE drifted from 21.55 to 30.32 over the last 7 runs (41% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 21.31 to 29.06 over the last 7 runs (36% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Nashik",
       "horizon": 72,
-      "detail": "MAE drifted from 17.37 to 26.11 over the last 7 runs (50% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 17.37 to 25.49 over the last 7 runs (47% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Nashik",
       "horizon": 120,
-      "detail": "MAE drifted from 20.67 to 27.93 over the last 7 runs (35% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 19.15 to 27.93 over the last 7 runs (46% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Nashik",
       "horizon": 144,
-      "detail": "MAE drifted from 22.14 to 27.78 over the last 7 runs (25% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 20.12 to 27.78 over the last 7 runs (38% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
@@ -391,25 +415,13 @@
       "type": "cumulative_drift",
       "location": "Vadodara",
       "horizon": 48,
-      "detail": "MAE drifted from 18.14 to 25.65 over the last 7 runs (41% worse) - no single run tripped the promotion gate, but the trend is real."
-    },
-    {
-      "type": "cumulative_drift",
-      "location": "Vadodara",
-      "horizon": 72,
-      "detail": "MAE drifted from 20.27 to 25.50 over the last 7 runs (26% worse) - no single run tripped the promotion gate, but the trend is real."
-    },
-    {
-      "type": "cumulative_drift",
-      "location": "Surat",
-      "horizon": 48,
-      "detail": "MAE drifted from 21.58 to 27.64 over the last 7 runs (28% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 18.14 to 23.57 over the last 7 runs (30% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Surat",
       "horizon": 120,
-      "detail": "MAE drifted from 18.98 to 25.88 over the last 7 runs (36% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 18.72 to 25.88 over the last 7 runs (38% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
@@ -421,19 +433,25 @@
       "type": "cumulative_drift",
       "location": "Guwahati",
       "horizon": 48,
-      "detail": "MAE drifted from 20.20 to 31.33 over the last 7 runs (55% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 20.06 to 30.41 over the last 7 runs (52% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Guwahati",
       "horizon": 72,
-      "detail": "MAE drifted from 17.01 to 25.28 over the last 7 runs (49% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 16.24 to 24.61 over the last 7 runs (51% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Guwahati",
       "horizon": 96,
       "detail": "MAE drifted from 17.20 to 21.72 over the last 7 runs (26% worse) - no single run tripped the promotion gate, but the trend is real."
+    },
+    {
+      "type": "cumulative_drift",
+      "location": "Guwahati",
+      "horizon": 120,
+      "detail": "MAE drifted from 15.95 to 20.17 over the last 7 runs (26% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
@@ -445,13 +463,13 @@
       "type": "cumulative_drift",
       "location": "Coimbatore",
       "horizon": 48,
-      "detail": "MAE drifted from 11.85 to 17.10 over the last 7 runs (44% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 11.46 to 16.11 over the last 7 runs (41% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Coimbatore",
       "horizon": 72,
-      "detail": "MAE drifted from 9.71 to 15.19 over the last 7 runs (56% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 9.71 to 14.19 over the last 7 runs (46% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
@@ -462,44 +480,50 @@
     {
       "type": "cumulative_drift",
       "location": "Coimbatore",
+      "horizon": 120,
+      "detail": "MAE drifted from 10.91 to 14.91 over the last 7 runs (37% worse) - no single run tripped the promotion gate, but the trend is real."
+    },
+    {
+      "type": "cumulative_drift",
+      "location": "Coimbatore",
       "horizon": 144,
-      "detail": "MAE drifted from 11.48 to 16.73 over the last 7 runs (46% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 11.48 to 16.19 over the last 7 runs (41% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Kochi",
       "horizon": 24,
-      "detail": "MAE drifted from 10.92 to 14.54 over the last 7 runs (33% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 10.92 to 14.09 over the last 7 runs (29% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Kochi",
       "horizon": 48,
-      "detail": "MAE drifted from 11.09 to 16.23 over the last 7 runs (46% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 10.70 to 15.62 over the last 7 runs (46% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Kochi",
       "horizon": 72,
-      "detail": "MAE drifted from 9.56 to 15.91 over the last 7 runs (66% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 9.36 to 15.83 over the last 7 runs (69% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Kochi",
       "horizon": 96,
-      "detail": "MAE drifted from 11.68 to 17.39 over the last 7 runs (49% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 11.68 to 16.36 over the last 7 runs (40% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Kochi",
       "horizon": 120,
-      "detail": "MAE drifted from 9.51 to 18.44 over the last 7 runs (94% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 9.09 to 17.69 over the last 7 runs (95% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Kochi",
       "horizon": 144,
-      "detail": "MAE drifted from 11.90 to 17.32 over the last 7 runs (46% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 11.78 to 16.42 over the last 7 runs (39% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
@@ -511,43 +535,43 @@
       "type": "cumulative_drift",
       "location": "Thiruvananthapuram",
       "horizon": 24,
-      "detail": "MAE drifted from 13.24 to 19.28 over the last 7 runs (46% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 13.19 to 18.04 over the last 7 runs (37% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Thiruvananthapuram",
       "horizon": 48,
-      "detail": "MAE drifted from 15.13 to 23.15 over the last 7 runs (53% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 15.11 to 22.70 over the last 7 runs (50% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Thiruvananthapuram",
       "horizon": 72,
-      "detail": "MAE drifted from 14.50 to 20.44 over the last 7 runs (41% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 13.70 to 20.22 over the last 7 runs (48% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Thiruvananthapuram",
       "horizon": 96,
-      "detail": "MAE drifted from 12.51 to 17.61 over the last 7 runs (41% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 12.15 to 17.61 over the last 7 runs (45% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Thiruvananthapuram",
       "horizon": 120,
-      "detail": "MAE drifted from 11.65 to 17.11 over the last 7 runs (47% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 11.38 to 17.11 over the last 7 runs (50% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Thiruvananthapuram",
       "horizon": 144,
-      "detail": "MAE drifted from 12.51 to 17.46 over the last 7 runs (40% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 12.50 to 17.23 over the last 7 runs (38% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Thiruvananthapuram",
       "horizon": 168,
-      "detail": "MAE drifted from 13.04 to 18.73 over the last 7 runs (44% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 12.68 to 18.73 over the last 7 runs (48% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
@@ -557,45 +581,33 @@
     },
     {
       "type": "cumulative_drift",
-      "location": "Ranchi",
-      "horizon": 144,
-      "detail": "MAE drifted from 19.07 to 24.51 over the last 7 runs (29% worse) - no single run tripped the promotion gate, but the trend is real."
-    },
-    {
-      "type": "cumulative_drift",
-      "location": "Jamshedpur",
-      "horizon": 24,
-      "detail": "MAE drifted from 22.35 to 28.59 over the last 7 runs (28% worse) - no single run tripped the promotion gate, but the trend is real."
-    },
-    {
-      "type": "cumulative_drift",
       "location": "Gwalior",
       "horizon": 24,
-      "detail": "MAE drifted from 14.75 to 19.65 over the last 7 runs (33% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 14.27 to 19.34 over the last 7 runs (35% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Gwalior",
       "horizon": 48,
-      "detail": "MAE drifted from 15.61 to 22.95 over the last 7 runs (47% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 14.42 to 22.22 over the last 7 runs (54% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Gwalior",
       "horizon": 72,
-      "detail": "MAE drifted from 16.27 to 22.88 over the last 7 runs (41% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 15.83 to 22.80 over the last 7 runs (44% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Gwalior",
       "horizon": 96,
-      "detail": "MAE drifted from 16.10 to 22.07 over the last 7 runs (37% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 15.78 to 22.02 over the last 7 runs (40% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Gwalior",
       "horizon": 120,
-      "detail": "MAE drifted from 14.53 to 24.62 over the last 7 runs (69% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 13.56 to 24.06 over the last 7 runs (77% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
@@ -607,13 +619,13 @@
       "type": "cumulative_drift",
       "location": "Gwalior",
       "horizon": 168,
-      "detail": "MAE drifted from 15.19 to 21.97 over the last 7 runs (45% worse) - no single run tripped the promotion gate, but the trend is real."
+      "detail": "MAE drifted from 14.73 to 21.97 over the last 7 runs (49% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "cumulative_drift",
       "location": "Raipur",
-      "horizon": 48,
-      "detail": "MAE drifted from 20.92 to 27.19 over the last 7 runs (30% worse) - no single run tripped the promotion gate, but the trend is real."
+      "horizon": 72,
+      "detail": "MAE drifted from 24.58 to 31.54 over the last 7 runs (28% worse) - no single run tripped the promotion gate, but the trend is real."
     },
     {
       "type": "repeated_rejections",
@@ -709,18 +721,6 @@
       "type": "repeated_rejections",
       "location": "Connaught Place",
       "horizon": 120,
-      "detail": "The last 3 training runs were all rejected by the promotion gate - the model has stopped beating its baseline/previous version repeatedly, not just once."
-    },
-    {
-      "type": "repeated_rejections",
-      "location": "Connaught Place",
-      "horizon": 144,
-      "detail": "The last 3 training runs were all rejected by the promotion gate - the model has stopped beating its baseline/previous version repeatedly, not just once."
-    },
-    {
-      "type": "repeated_rejections",
-      "location": "Connaught Place",
-      "horizon": 168,
       "detail": "The last 3 training runs were all rejected by the promotion gate - the model has stopped beating its baseline/previous version repeatedly, not just once."
     },
     {
@@ -859,12 +859,6 @@
       "type": "repeated_rejections",
       "location": "ITO",
       "horizon": 96,
-      "detail": "The last 3 training runs were all rejected by the promotion gate - the model has stopped beating its baseline/previous version repeatedly, not just once."
-    },
-    {
-      "type": "repeated_rejections",
-      "location": "ITO",
-      "horizon": 120,
       "detail": "The last 3 training runs were all rejected by the promotion gate - the model has stopped beating its baseline/previous version repeatedly, not just once."
     },
     {
@@ -1837,12 +1831,6 @@
       "type": "repeated_rejections",
       "location": "Chandigarh",
       "horizon": 24,
-      "detail": "The last 3 training runs were all rejected by the promotion gate - the model has stopped beating its baseline/previous version repeatedly, not just once."
-    },
-    {
-      "type": "repeated_rejections",
-      "location": "Chandigarh",
-      "horizon": 48,
       "detail": "The last 3 training runs were all rejected by the promotion gate - the model has stopped beating its baseline/previous version repeatedly, not just once."
     },
     {
