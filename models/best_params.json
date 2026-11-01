@@ -1,17 +1,6 @@
 {
   "IGI Airport|24": {
-    "mae": 157.8010282254332,
-    "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "IGI Airport|48": {
-    "mae": 198.445297438334,
+    "mae": 110.4744660963092,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -21,8 +10,19 @@
       "n_jobs": -1
     }
   },
+  "IGI Airport|48": {
+    "mae": 136.71903071424694,
+    "params": {
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
   "IGI Airport|72": {
-    "mae": 163.95871367223054,
+    "mae": 116.17068257011105,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -33,7 +33,7 @@
     }
   },
   "IGI Airport|96": {
-    "mae": 164.93347242018757,
+    "mae": 100.7867398085098,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -44,7 +44,7 @@
     }
   },
   "IGI Airport|120": {
-    "mae": 136.04194707158788,
+    "mae": 122.99812879649872,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -55,18 +55,18 @@
     }
   },
   "IGI Airport|144": {
-    "mae": 113.8467191609905,
+    "mae": 98.98296527862549,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
+      "n_estimators": 800,
+      "max_depth": 4,
+      "learning_rate": 0.02,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
       "n_jobs": -1
     }
   },
   "IGI Airport|168": {
-    "mae": 186.0448087895582,
+    "mae": 114.00270553015767,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -77,7 +77,7 @@
     }
   },
   "Anand Vihar|24": {
-    "mae": 33.89398885428623,
+    "mae": 26.215504562645627,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -88,7 +88,7 @@
     }
   },
   "Anand Vihar|48": {
-    "mae": 47.488356616736596,
+    "mae": 31.6529035780165,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -99,7 +99,7 @@
     }
   },
   "Anand Vihar|72": {
-    "mae": 45.38923513912461,
+    "mae": 30.73426908484489,
     "params": {
       "n_estimators": 500,
       "learning_rate": 0.03,
@@ -110,29 +110,29 @@
     }
   },
   "Anand Vihar|96": {
-    "mae": 62.21537959528905,
+    "mae": 32.8162811072164,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Anand Vihar|120": {
-    "mae": 54.59669489314901,
+    "mae": 32.90202498129749,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Anand Vihar|144": {
-    "mae": 45.69411218537757,
+    "mae": 29.486527421739368,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -143,7 +143,7 @@
     }
   },
   "Anand Vihar|168": {
-    "mae": 43.27929215794287,
+    "mae": 27.686323977188323,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -154,18 +154,18 @@
     }
   },
   "Connaught Place|24": {
-    "mae": 34.65951193136062,
+    "mae": 25.762573851200575,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Connaught Place|48": {
-    "mae": 49.79981317839554,
+    "mae": 34.77343599446614,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -176,40 +176,18 @@
     }
   },
   "Connaught Place|72": {
-    "mae": 46.84458964079329,
+    "mae": 30.622770677232957,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Connaught Place|96": {
-    "mae": 66.6618434532016,
-    "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Connaught Place|120": {
-    "mae": 56.272576676553754,
-    "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Connaught Place|144": {
-    "mae": 48.253720522166496,
+    "mae": 32.48458434230062,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -219,30 +197,52 @@
       "n_jobs": -1
     }
   },
-  "Connaught Place|168": {
-    "mae": 46.30387066681372,
+  "Connaught Place|120": {
+    "mae": 34.570634236467,
+    "params": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "max_depth": 4,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Connaught Place|144": {
+    "mae": 30.752292082044818,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
       "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Connaught Place|168": {
+    "mae": 28.230244854134572,
+    "params": {
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Dwarka|24": {
-    "mae": 157.37918451679826,
+    "mae": 114.54679489804987,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Dwarka|48": {
-    "mae": 197.55993181438538,
+    "mae": 140.49059622531468,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -253,7 +253,7 @@
     }
   },
   "Dwarka|72": {
-    "mae": 170.09210315445094,
+    "mae": 118.65012638109147,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -264,7 +264,7 @@
     }
   },
   "Dwarka|96": {
-    "mae": 166.99660506154973,
+    "mae": 101.96993264590992,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -275,7 +275,7 @@
     }
   },
   "Dwarka|120": {
-    "mae": 137.71743421412228,
+    "mae": 121.39659129851455,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -286,18 +286,18 @@
     }
   },
   "Dwarka|144": {
-    "mae": 114.0506269598726,
+    "mae": 97.20307976051613,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
+      "n_estimators": 800,
+      "max_depth": 4,
+      "learning_rate": 0.02,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
       "n_jobs": -1
     }
   },
   "Dwarka|168": {
-    "mae": 186.4370728855811,
+    "mae": 114.30660595961021,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -308,7 +308,7 @@
     }
   },
   "Okhla Phase III|24": {
-    "mae": 155.62502332208282,
+    "mae": 114.08464141979553,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -319,7 +319,7 @@
     }
   },
   "Okhla Phase III|48": {
-    "mae": 193.16841262744373,
+    "mae": 130.01539200168185,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -330,7 +330,7 @@
     }
   },
   "Okhla Phase III|72": {
-    "mae": 163.8990625696275,
+    "mae": 121.92601266356326,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -341,7 +341,7 @@
     }
   },
   "Okhla Phase III|96": {
-    "mae": 169.41407063802083,
+    "mae": 107.82269055810988,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -352,7 +352,7 @@
     }
   },
   "Okhla Phase III|120": {
-    "mae": 135.9564504746774,
+    "mae": 115.53163836417941,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -363,18 +363,18 @@
     }
   },
   "Okhla Phase III|144": {
-    "mae": 113.18552427819027,
+    "mae": 100.61803896162245,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
+      "n_estimators": 800,
+      "max_depth": 4,
+      "learning_rate": 0.02,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
       "n_jobs": -1
     }
   },
   "Okhla Phase III|168": {
-    "mae": 179.3235650774186,
+    "mae": 120.83893777909972,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -385,18 +385,18 @@
     }
   },
   "Rohini|24": {
-    "mae": 34.53507368621103,
+    "mae": 27.222232256437604,
     "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Rohini|48": {
-    "mae": 51.81751952832966,
+    "mae": 33.107153089735235,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -407,18 +407,18 @@
     }
   },
   "Rohini|72": {
-    "mae": 47.625483888792765,
+    "mae": 32.00330239881849,
     "params": {
       "n_estimators": 500,
-      "max_depth": 6,
       "learning_rate": 0.03,
+      "max_depth": 4,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Rohini|96": {
-    "mae": 68.81977373010972,
+    "mae": 32.47438542292669,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -429,29 +429,29 @@
     }
   },
   "Rohini|120": {
-    "mae": 59.91494026753439,
+    "mae": 34.43171425215695,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Rohini|144": {
-    "mae": 50.301089584887336,
+    "mae": 33.35908990789343,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
+      "n_estimators": 800,
+      "max_depth": 4,
+      "learning_rate": 0.02,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
       "n_jobs": -1
     }
   },
   "Rohini|168": {
-    "mae": 48.71566964551276,
+    "mae": 28.87090811572724,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -462,18 +462,18 @@
     }
   },
   "ITO|24": {
-    "mae": 35.48835274939443,
+    "mae": 26.3369971089773,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "ITO|48": {
-    "mae": 50.680834558591314,
+    "mae": 36.513644052208015,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -484,18 +484,18 @@
     }
   },
   "ITO|72": {
-    "mae": 47.116963571519705,
+    "mae": 33.33061909852204,
     "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "ITO|96": {
-    "mae": 45.81718679515238,
+    "mae": 34.957931590192196,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -506,7 +506,7 @@
     }
   },
   "ITO|120": {
-    "mae": 42.65247016198857,
+    "mae": 34.96749561183261,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -517,62 +517,29 @@
     }
   },
   "ITO|144": {
-    "mae": 37.853759233156836,
+    "mae": 30.270617040606776,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "ITO|168": {
-    "mae": 38.85558700157852,
+    "mae": 30.204271838734456,
     "params": {
       "n_estimators": 500,
+      "max_depth": 6,
       "learning_rate": 0.03,
-      "max_depth": 4,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Punjabi Bagh|24": {
-    "mae": 35.807295401653846,
-    "params": {
-      "n_estimators": 500,
-      "learning_rate": 0.03,
-      "max_depth": 4,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Punjabi Bagh|48": {
-    "mae": 60.25941635975287,
-    "params": {
-      "n_estimators": 500,
-      "learning_rate": 0.03,
-      "max_depth": 4,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Punjabi Bagh|72": {
-    "mae": 51.955641530613,
-    "params": {
-      "n_estimators": 500,
-      "learning_rate": 0.03,
-      "max_depth": 4,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Punjabi Bagh|96": {
-    "mae": 59.71076191381081,
+    "mae": 26.04009121082447,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -582,8 +549,41 @@
       "n_jobs": -1
     }
   },
+  "Punjabi Bagh|48": {
+    "mae": 35.78512278812032,
+    "params": {
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Punjabi Bagh|72": {
+    "mae": 30.912836380366464,
+    "params": {
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Punjabi Bagh|96": {
+    "mae": 32.99457111997468,
+    "params": {
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
   "Punjabi Bagh|120": {
-    "mae": 50.37518691221872,
+    "mae": 36.47292076777486,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -594,18 +594,18 @@
     }
   },
   "Punjabi Bagh|144": {
-    "mae": 40.38610553236866,
+    "mae": 34.47020352681478,
     "params": {
       "n_estimators": 500,
+      "max_depth": 6,
       "learning_rate": 0.03,
-      "max_depth": 4,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Punjabi Bagh|168": {
-    "mae": 42.560991199513815,
+    "mae": 33.20192792901945,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -616,18 +616,18 @@
     }
   },
   "R K Puram|24": {
-    "mae": 172.63646665354867,
+    "mae": 99.35113685677905,
     "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "R K Puram|48": {
-    "mae": 225.74446739311793,
+    "mae": 128.71247271078605,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -638,18 +638,18 @@
     }
   },
   "R K Puram|72": {
-    "mae": 172.3948729771648,
+    "mae": 117.79613366641908,
     "params": {
       "n_estimators": 500,
-      "max_depth": 6,
       "learning_rate": 0.03,
+      "max_depth": 4,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "R K Puram|96": {
-    "mae": 164.98800240742793,
+    "mae": 109.56939717514256,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -660,18 +660,18 @@
     }
   },
   "R K Puram|120": {
-    "mae": 140.88654394944507,
+    "mae": 113.75247477846283,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "R K Puram|144": {
-    "mae": 112.24106528468863,
+    "mae": 83.66503549223964,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -682,7 +682,7 @@
     }
   },
   "R K Puram|168": {
-    "mae": 177.4590938139727,
+    "mae": 99.31750116909251,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -693,18 +693,18 @@
     }
   },
   "Jahangirpuri|24": {
-    "mae": 36.16994958525722,
+    "mae": 26.938042781812726,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Jahangirpuri|48": {
-    "mae": 58.57171268837125,
+    "mae": 37.93636633411252,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -715,40 +715,7 @@
     }
   },
   "Jahangirpuri|72": {
-    "mae": 49.500085821199185,
-    "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
-      "n_jobs": -1
-    }
-  },
-  "Jahangirpuri|96": {
-    "mae": 49.67631451784067,
-    "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Jahangirpuri|120": {
-    "mae": 52.72094876826718,
-    "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Jahangirpuri|144": {
-    "mae": 39.351766700351355,
+    "mae": 29.137622371288614,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -758,41 +725,30 @@
       "n_jobs": -1
     }
   },
-  "Jahangirpuri|168": {
-    "mae": 42.614022986094156,
+  "Jahangirpuri|96": {
+    "mae": 36.12247873235632,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
-  "Mumbai|24": {
-    "mae": 27.84414920806885,
+  "Jahangirpuri|120": {
+    "mae": 36.58792986802652,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
-  "Mumbai|48": {
-    "mae": 31.90318846062048,
-    "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
-      "n_jobs": -1
-    }
-  },
-  "Mumbai|72": {
-    "mae": 33.771398741755654,
+  "Jahangirpuri|144": {
+    "mae": 31.47687704077264,
     "params": {
       "n_estimators": 500,
       "learning_rate": 0.03,
@@ -802,8 +758,52 @@
       "n_jobs": -1
     }
   },
+  "Jahangirpuri|168": {
+    "mae": 30.832937373841208,
+    "params": {
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Mumbai|24": {
+    "mae": 28.619899705279572,
+    "params": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "max_depth": 4,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Mumbai|48": {
+    "mae": 32.28524027345408,
+    "params": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "max_depth": 4,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Mumbai|72": {
+    "mae": 31.641089577631117,
+    "params": {
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
   "Mumbai|96": {
-    "mae": 35.677237488412615,
+    "mae": 33.13030724702058,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -814,29 +814,29 @@
     }
   },
   "Mumbai|120": {
-    "mae": 37.42338846344309,
+    "mae": 34.876275280159966,
     "params": {
       "n_estimators": 500,
-      "max_depth": 6,
       "learning_rate": 0.03,
+      "max_depth": 4,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Mumbai|144": {
-    "mae": 32.22735445102056,
+    "mae": 32.72661083637256,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Mumbai|168": {
-    "mae": 31.167294787856,
+    "mae": 34.586029410476314,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -847,7 +847,7 @@
     }
   },
   "Bengaluru|24": {
-    "mae": 14.679420687851396,
+    "mae": 19.93249866502702,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -858,7 +858,7 @@
     }
   },
   "Bengaluru|48": {
-    "mae": 17.514804544635847,
+    "mae": 21.130140603182006,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -869,18 +869,18 @@
     }
   },
   "Bengaluru|72": {
-    "mae": 16.90682769319904,
+    "mae": 23.151699444132113,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Bengaluru|96": {
-    "mae": 17.2928581352809,
+    "mae": 24.635810188010886,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -891,18 +891,18 @@
     }
   },
   "Bengaluru|120": {
-    "mae": 17.566003263057187,
+    "mae": 25.62713013769875,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Bengaluru|144": {
-    "mae": 14.892021301112223,
+    "mae": 24.0836674911716,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -913,7 +913,7 @@
     }
   },
   "Bengaluru|168": {
-    "mae": 14.073068976402283,
+    "mae": 21.405740130118776,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -924,18 +924,18 @@
     }
   },
   "Chennai|24": {
-    "mae": 18.142529156138597,
+    "mae": 24.02540923661715,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Chennai|48": {
-    "mae": 22.5972360236972,
+    "mae": 30.24598187925589,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -946,18 +946,18 @@
     }
   },
   "Chennai|72": {
-    "mae": 19.592316763199385,
+    "mae": 34.04696806811411,
     "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Chennai|96": {
-    "mae": 22.58217585961423,
+    "mae": 35.13828179571364,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -968,40 +968,40 @@
     }
   },
   "Chennai|120": {
-    "mae": 23.33981798239771,
+    "mae": 32.29033919500073,
     "params": {
       "n_estimators": 500,
-      "max_depth": 6,
       "learning_rate": 0.03,
+      "max_depth": 4,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Chennai|144": {
-    "mae": 24.02214790029624,
+    "mae": 31.72624273435764,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
+      "n_estimators": 800,
+      "max_depth": 4,
+      "learning_rate": 0.02,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
       "n_jobs": -1
     }
   },
   "Chennai|168": {
-    "mae": 23.34011876980464,
+    "mae": 31.329681936747722,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
+      "n_estimators": 800,
+      "max_depth": 4,
+      "learning_rate": 0.02,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
       "n_jobs": -1
     }
   },
   "Kolkata|24": {
-    "mae": 26.97381974377679,
+    "mae": 20.954099704759535,
     "params": {
       "n_estimators": 500,
       "learning_rate": 0.03,
@@ -1012,40 +1012,7 @@
     }
   },
   "Kolkata|48": {
-    "mae": 32.80124217762666,
-    "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
-      "n_jobs": -1
-    }
-  },
-  "Kolkata|72": {
-    "mae": 32.05441297085131,
-    "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
-      "n_jobs": -1
-    }
-  },
-  "Kolkata|96": {
-    "mae": 41.607026622523016,
-    "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
-      "n_jobs": -1
-    }
-  },
-  "Kolkata|120": {
-    "mae": 38.31516606674582,
+    "mae": 31.37177254517154,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -1055,8 +1022,8 @@
       "n_jobs": -1
     }
   },
-  "Kolkata|144": {
-    "mae": 35.12808111131805,
+  "Kolkata|72": {
+    "mae": 33.877669843621206,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -1066,19 +1033,8 @@
       "n_jobs": -1
     }
   },
-  "Kolkata|168": {
-    "mae": 29.484639517466224,
-    "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Hyderabad|24": {
-    "mae": 18.283924668345286,
+  "Kolkata|96": {
+    "mae": 37.51143573831629,
     "params": {
       "n_estimators": 500,
       "learning_rate": 0.03,
@@ -1088,8 +1044,52 @@
       "n_jobs": -1
     }
   },
+  "Kolkata|120": {
+    "mae": 46.686466406880406,
+    "params": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "max_depth": 4,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Kolkata|144": {
+    "mae": 46.42605839589196,
+    "params": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "max_depth": 4,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Kolkata|168": {
+    "mae": 47.12170191495612,
+    "params": {
+      "n_estimators": 800,
+      "max_depth": 4,
+      "learning_rate": 0.02,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "n_jobs": -1
+    }
+  },
+  "Hyderabad|24": {
+    "mae": 18.53094114601065,
+    "params": {
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
   "Hyderabad|48": {
-    "mae": 18.253244133570686,
+    "mae": 20.65516943048548,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -1100,29 +1100,29 @@
     }
   },
   "Hyderabad|72": {
-    "mae": 14.97117544648611,
+    "mae": 18.17301640756813,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "max_depth": 4,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Hyderabad|96": {
-    "mae": 14.365623167372243,
+    "mae": 18.718552554162194,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
+      "n_estimators": 800,
+      "max_depth": 4,
+      "learning_rate": 0.02,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
       "n_jobs": -1
     }
   },
   "Hyderabad|120": {
-    "mae": 14.822989837328596,
+    "mae": 20.946160100179423,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -1133,7 +1133,7 @@
     }
   },
   "Hyderabad|144": {
-    "mae": 13.579409604350095,
+    "mae": 19.09536677980886,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -1144,29 +1144,29 @@
     }
   },
   "Hyderabad|168": {
-    "mae": 15.0889028375799,
+    "mae": 21.64134521858365,
     "params": {
       "n_estimators": 500,
+      "max_depth": 6,
       "learning_rate": 0.03,
-      "max_depth": 4,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Pune|24": {
-    "mae": 25.058292364842682,
+    "mae": 17.191323691551837,
     "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Pune|48": {
-    "mae": 22.434989147560266,
+    "mae": 19.599503937474005,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -1177,7 +1177,18 @@
     }
   },
   "Pune|72": {
-    "mae": 20.955935272292713,
+    "mae": 18.21349474051749,
+    "params": {
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Pune|96": {
+    "mae": 19.121280887115624,
     "params": {
       "n_estimators": 800,
       "max_depth": 4,
@@ -1187,41 +1198,41 @@
       "n_jobs": -1
     }
   },
-  "Pune|96": {
-    "mae": 21.734121637008897,
-    "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
   "Pune|120": {
-    "mae": 20.17228388132783,
+    "mae": 19.490630079570572,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Pune|144": {
-    "mae": 16.994909496897275,
+    "mae": 18.663839147623303,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Pune|168": {
-    "mae": 16.03643203377724,
+    "mae": 20.988743782043457,
+    "params": {
+      "n_estimators": 800,
+      "max_depth": 4,
+      "learning_rate": 0.02,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "n_jobs": -1
+    }
+  },
+  "Ahmedabad|24": {
+    "mae": 16.645398212655245,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -1231,52 +1242,41 @@
       "n_jobs": -1
     }
   },
-  "Ahmedabad|24": {
-    "mae": 15.464776448370184,
-    "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
   "Ahmedabad|48": {
-    "mae": 23.235464645834533,
+    "mae": 23.285666501144476,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Ahmedabad|72": {
-    "mae": 24.197073865292673,
+    "mae": 24.4184384652234,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "max_depth": 4,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Ahmedabad|96": {
-    "mae": 21.37892597140978,
+    "mae": 24.397552956475153,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "max_depth": 4,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Ahmedabad|120": {
-    "mae": 23.97723932411465,
+    "mae": 23.731184752558317,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -1287,29 +1287,29 @@
     }
   },
   "Ahmedabad|144": {
-    "mae": 22.349296711400612,
+    "mae": 25.733907093933976,
     "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Ahmedabad|168": {
-    "mae": 20.857536335786182,
+    "mae": 23.704580111708935,
     "params": {
-      "n_estimators": 500,
-      "learning_rate": 0.03,
-      "max_depth": 4,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Jaipur|24": {
-    "mae": 17.57157887949527,
+    "mae": 17.212832189996146,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -1320,18 +1320,7 @@
     }
   },
   "Jaipur|48": {
-    "mae": 17.936572669534122,
-    "params": {
-      "n_estimators": 500,
-      "learning_rate": 0.03,
-      "max_depth": 4,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Jaipur|72": {
-    "mae": 18.440888639231822,
+    "mae": 20.835244001845968,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -1341,8 +1330,19 @@
       "n_jobs": -1
     }
   },
+  "Jaipur|72": {
+    "mae": 22.288421816344655,
+    "params": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "max_depth": 4,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
   "Jaipur|96": {
-    "mae": 19.608142496233608,
+    "mae": 20.842795114163998,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -1353,7 +1353,7 @@
     }
   },
   "Jaipur|120": {
-    "mae": 22.00009882583231,
+    "mae": 19.19917249724339,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -1364,7 +1364,7 @@
     }
   },
   "Jaipur|144": {
-    "mae": 19.788884790164907,
+    "mae": 18.650667438235892,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -1375,18 +1375,18 @@
     }
   },
   "Jaipur|168": {
-    "mae": 18.06581799586614,
+    "mae": 17.49085333062131,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Lucknow|24": {
-    "mae": 25.487738481540127,
+    "mae": 24.261178109891745,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -1397,7 +1397,7 @@
     }
   },
   "Lucknow|48": {
-    "mae": 38.38079482433842,
+    "mae": 35.191958797679234,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -1408,29 +1408,18 @@
     }
   },
   "Lucknow|72": {
-    "mae": 38.67302668557239,
+    "mae": 34.55092040595658,
     "params": {
       "n_estimators": 500,
-      "max_depth": 6,
       "learning_rate": 0.03,
+      "max_depth": 4,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Lucknow|96": {
-    "mae": 35.34644038521465,
-    "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Lucknow|120": {
-    "mae": 31.35332617977549,
+    "mae": 38.060959536940956,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -1440,8 +1429,19 @@
       "n_jobs": -1
     }
   },
+  "Lucknow|120": {
+    "mae": 35.605556172832074,
+    "params": {
+      "n_estimators": 800,
+      "max_depth": 4,
+      "learning_rate": 0.02,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "n_jobs": -1
+    }
+  },
   "Lucknow|144": {
-    "mae": 28.272278996103818,
+    "mae": 29.660203700494993,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -1452,7 +1452,7 @@
     }
   },
   "Lucknow|168": {
-    "mae": 27.871179918448128,
+    "mae": 29.84958714754388,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -1463,7 +1463,7 @@
     }
   },
   "Kanpur|24": {
-    "mae": 24.755359512625386,
+    "mae": 21.530423941847456,
     "params": {
       "n_estimators": 500,
       "learning_rate": 0.03,
@@ -1474,40 +1474,29 @@
     }
   },
   "Kanpur|48": {
-    "mae": 33.68956062092501,
+    "mae": 29.78957889953889,
     "params": {
       "n_estimators": 500,
-      "max_depth": 6,
       "learning_rate": 0.03,
+      "max_depth": 4,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Kanpur|72": {
-    "mae": 33.66944634356902,
+    "mae": 28.17483161086336,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Kanpur|96": {
-    "mae": 34.44471417144315,
-    "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
-      "n_jobs": -1
-    }
-  },
-  "Kanpur|120": {
-    "mae": 36.54505633823763,
+    "mae": 29.458582302376072,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -1517,8 +1506,19 @@
       "n_jobs": -1
     }
   },
+  "Kanpur|120": {
+    "mae": 30.542574023752707,
+    "params": {
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
   "Kanpur|144": {
-    "mae": 35.01136285054315,
+    "mae": 29.640814942997213,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -1529,7 +1529,7 @@
     }
   },
   "Kanpur|168": {
-    "mae": 30.929267013072966,
+    "mae": 30.67109300896312,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -1540,7 +1540,7 @@
     }
   },
   "Nagpur|24": {
-    "mae": 18.748537915424237,
+    "mae": 27.18902395958323,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -1551,40 +1551,7 @@
     }
   },
   "Nagpur|48": {
-    "mae": 22.417948292750935,
-    "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Nagpur|72": {
-    "mae": 24.24545123731319,
-    "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Nagpur|96": {
-    "mae": 26.23588720733796,
-    "params": {
-      "n_estimators": 500,
-      "learning_rate": 0.03,
-      "max_depth": 4,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Nagpur|120": {
-    "mae": 25.128468589976354,
+    "mae": 30.075000956263477,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -1594,19 +1561,52 @@
       "n_jobs": -1
     }
   },
-  "Nagpur|144": {
-    "mae": 19.914942487736337,
+  "Nagpur|72": {
+    "mae": 32.451630709586894,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Nagpur|96": {
+    "mae": 30.09152172583121,
+    "params": {
+      "n_estimators": 800,
+      "max_depth": 4,
+      "learning_rate": 0.02,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "n_jobs": -1
+    }
+  },
+  "Nagpur|120": {
+    "mae": 30.048988757782695,
+    "params": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "max_depth": 4,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Nagpur|144": {
+    "mae": 28.699419102962548,
+    "params": {
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Nagpur|168": {
-    "mae": 22.964719037214916,
+    "mae": 35.682715920626265,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -1617,7 +1617,7 @@
     }
   },
   "Indore|24": {
-    "mae": 14.218283103828998,
+    "mae": 22.30017031501321,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -1628,7 +1628,7 @@
     }
   },
   "Indore|48": {
-    "mae": 16.611181165225542,
+    "mae": 26.50157342263318,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -1639,40 +1639,40 @@
     }
   },
   "Indore|72": {
-    "mae": 18.329779881511243,
+    "mae": 28.263238733786125,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
+      "n_estimators": 800,
+      "max_depth": 4,
+      "learning_rate": 0.02,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
       "n_jobs": -1
     }
   },
   "Indore|96": {
-    "mae": 17.732523298755133,
+    "mae": 27.383885902082415,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Indore|120": {
-    "mae": 17.13031126658122,
+    "mae": 26.902522444160063,
     "params": {
       "n_estimators": 500,
+      "max_depth": 6,
       "learning_rate": 0.03,
-      "max_depth": 4,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Indore|144": {
-    "mae": 17.50016183197183,
+    "mae": 27.609814383766867,
     "params": {
       "n_estimators": 500,
       "learning_rate": 0.03,
@@ -1683,7 +1683,7 @@
     }
   },
   "Indore|168": {
-    "mae": 19.4947807189615,
+    "mae": 26.970474583894305,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -1694,18 +1694,7 @@
     }
   },
   "Bhopal|24": {
-    "mae": 14.814861088173064,
-    "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Bhopal|48": {
-    "mae": 16.208599773805535,
+    "mae": 20.271799852189975,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -1715,8 +1704,19 @@
       "n_jobs": -1
     }
   },
+  "Bhopal|48": {
+    "mae": 22.013190096233963,
+    "params": {
+      "n_estimators": 800,
+      "max_depth": 4,
+      "learning_rate": 0.02,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "n_jobs": -1
+    }
+  },
   "Bhopal|72": {
-    "mae": 16.093793548890694,
+    "mae": 21.850932573389123,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -1727,7 +1727,7 @@
     }
   },
   "Bhopal|96": {
-    "mae": 17.9822570529686,
+    "mae": 25.898252231078526,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -1738,40 +1738,40 @@
     }
   },
   "Bhopal|120": {
-    "mae": 18.225668779353505,
+    "mae": 22.620959262938296,
     "params": {
-      "n_estimators": 500,
-      "learning_rate": 0.03,
+      "n_estimators": 800,
       "max_depth": 4,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
+      "learning_rate": 0.02,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
       "n_jobs": -1
     }
   },
   "Bhopal|144": {
-    "mae": 17.761451101303102,
+    "mae": 21.87844766863225,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Bhopal|168": {
-    "mae": 16.97314129380322,
+    "mae": 21.48136941483877,
     "params": {
       "n_estimators": 500,
+      "max_depth": 6,
       "learning_rate": 0.03,
-      "max_depth": 4,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Patna|24": {
-    "mae": 15.892700143462246,
+    "mae": 18.40879007399891,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -1782,29 +1782,29 @@
     }
   },
   "Patna|48": {
-    "mae": 21.96019688400568,
+    "mae": 24.41681097888072,
     "params": {
-      "n_estimators": 500,
-      "learning_rate": 0.03,
-      "max_depth": 4,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Patna|72": {
-    "mae": 22.105290286695187,
+    "mae": 24.12272333568997,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Patna|96": {
-    "mae": 23.002197695018058,
+    "mae": 22.429773067420633,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -1815,29 +1815,29 @@
     }
   },
   "Patna|120": {
-    "mae": 24.80682823064969,
+    "mae": 21.65809937969768,
     "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Patna|144": {
-    "mae": 25.42905105512167,
+    "mae": 21.999281979063483,
     "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Patna|168": {
-    "mae": 26.32265386978785,
+    "mae": 24.209307431711732,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -1848,7 +1848,18 @@
     }
   },
   "Ludhiana|24": {
-    "mae": 30.999862048695388,
+    "mae": 23.72035631256788,
+    "params": {
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Ludhiana|48": {
+    "mae": 26.329972466516278,
     "params": {
       "n_estimators": 500,
       "learning_rate": 0.03,
@@ -1858,8 +1869,8 @@
       "n_jobs": -1
     }
   },
-  "Ludhiana|48": {
-    "mae": 47.672018978642484,
+  "Ludhiana|72": {
+    "mae": 28.402030517858105,
     "params": {
       "n_estimators": 800,
       "max_depth": 4,
@@ -1869,63 +1880,52 @@
       "n_jobs": -1
     }
   },
-  "Ludhiana|72": {
-    "mae": 46.835854852021626,
+  "Ludhiana|96": {
+    "mae": 28.16849358170121,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
       "learning_rate": 0.05,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Ludhiana|96": {
-    "mae": 54.56025200465217,
-    "params": {
-      "n_estimators": 500,
-      "learning_rate": 0.03,
-      "max_depth": 4,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Ludhiana|120": {
-    "mae": 58.19520468929697,
+    "mae": 26.15890098177771,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
+      "n_estimators": 800,
+      "max_depth": 4,
+      "learning_rate": 0.02,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
       "n_jobs": -1
     }
   },
   "Ludhiana|144": {
-    "mae": 60.93587721991785,
+    "mae": 26.133650764356855,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
+      "n_estimators": 800,
+      "max_depth": 4,
+      "learning_rate": 0.02,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
       "n_jobs": -1
     }
   },
   "Ludhiana|168": {
-    "mae": 51.61670738855999,
+    "mae": 25.988301444167725,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Agra|24": {
-    "mae": 25.067817110228308,
+    "mae": 20.79834921798364,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -1936,7 +1936,18 @@
     }
   },
   "Agra|48": {
-    "mae": 27.31290551727893,
+    "mae": 25.2129892892967,
+    "params": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "max_depth": 4,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Agra|72": {
+    "mae": 23.653044877358532,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -1946,41 +1957,8 @@
       "n_jobs": -1
     }
   },
-  "Agra|72": {
-    "mae": 28.597145224803718,
-    "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
-      "n_jobs": -1
-    }
-  },
   "Agra|96": {
-    "mae": 26.431866639103724,
-    "params": {
-      "n_estimators": 500,
-      "learning_rate": 0.03,
-      "max_depth": 4,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Agra|120": {
-    "mae": 27.099124021578557,
-    "params": {
-      "n_estimators": 500,
-      "learning_rate": 0.03,
-      "max_depth": 4,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Agra|144": {
-    "mae": 29.06057150142709,
+    "mae": 27.571659960570162,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -1990,8 +1968,30 @@
       "n_jobs": -1
     }
   },
+  "Agra|120": {
+    "mae": 27.13596225075878,
+    "params": {
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Agra|144": {
+    "mae": 27.408979363464066,
+    "params": {
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
   "Agra|168": {
-    "mae": 22.832553227742512,
+    "mae": 26.006484853936154,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2002,7 +2002,7 @@
     }
   },
   "Nashik|24": {
-    "mae": 18.62049852446014,
+    "mae": 15.629725186101993,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2013,18 +2013,7 @@
     }
   },
   "Nashik|48": {
-    "mae": 22.49565265712453,
-    "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
-      "n_jobs": -1
-    }
-  },
-  "Nashik|72": {
-    "mae": 25.494529883226555,
+    "mae": 21.38286696267784,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2034,8 +2023,30 @@
       "n_jobs": -1
     }
   },
+  "Nashik|72": {
+    "mae": 24.280599170260956,
+    "params": {
+      "n_estimators": 800,
+      "max_depth": 4,
+      "learning_rate": 0.02,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "n_jobs": -1
+    }
+  },
   "Nashik|96": {
-    "mae": 27.1442639404142,
+    "mae": 25.546793258022255,
+    "params": {
+      "n_estimators": 800,
+      "max_depth": 4,
+      "learning_rate": 0.02,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "n_jobs": -1
+    }
+  },
+  "Nashik|120": {
+    "mae": 25.874259672119717,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -2045,19 +2056,8 @@
       "n_jobs": -1
     }
   },
-  "Nashik|120": {
-    "mae": 27.929932140075056,
-    "params": {
-      "n_estimators": 500,
-      "learning_rate": 0.03,
-      "max_depth": 4,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
   "Nashik|144": {
-    "mae": 27.77788054347038,
+    "mae": 24.633911439448454,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2068,18 +2068,18 @@
     }
   },
   "Nashik|168": {
-    "mae": 28.54794561598036,
+    "mae": 28.26556392595606,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Vadodara|24": {
-    "mae": 17.690299232260692,
+    "mae": 19.57884400714139,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2090,40 +2090,40 @@
     }
   },
   "Vadodara|48": {
-    "mae": 23.574990635292203,
+    "mae": 22.75176528999709,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Vadodara|72": {
-    "mae": 23.38631194005558,
+    "mae": 24.264814698805502,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Vadodara|96": {
-    "mae": 21.314986442680933,
+    "mae": 27.453235135255035,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Vadodara|120": {
-    "mae": 21.077540545778227,
+    "mae": 26.976136794112655,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2134,7 +2134,7 @@
     }
   },
   "Vadodara|144": {
-    "mae": 20.02520191546568,
+    "mae": 21.619272707536886,
     "params": {
       "n_estimators": 800,
       "max_depth": 4,
@@ -2145,7 +2145,7 @@
     }
   },
   "Vadodara|168": {
-    "mae": 18.469705351193745,
+    "mae": 23.13049843528054,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2156,7 +2156,7 @@
     }
   },
   "Surat|24": {
-    "mae": 19.882240235571768,
+    "mae": 20.822198603703427,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2167,7 +2167,7 @@
     }
   },
   "Surat|48": {
-    "mae": 26.825099337753375,
+    "mae": 28.379516258589717,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2178,7 +2178,7 @@
     }
   },
   "Surat|72": {
-    "mae": 28.747964684567858,
+    "mae": 30.96384058705083,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2189,7 +2189,7 @@
     }
   },
   "Surat|96": {
-    "mae": 24.72101343997239,
+    "mae": 29.128050171041714,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2200,29 +2200,18 @@
     }
   },
   "Surat|120": {
-    "mae": 25.876021418620628,
+    "mae": 26.35114732715191,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "max_depth": 4,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Surat|144": {
-    "mae": 26.210307947794597,
-    "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Surat|168": {
-    "mae": 23.759498890871726,
+    "mae": 30.109675309760725,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2232,8 +2221,19 @@
       "n_jobs": -1
     }
   },
+  "Surat|168": {
+    "mae": 30.623997545705258,
+    "params": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "max_depth": 4,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
   "Rajkot|24": {
-    "mae": 8.068138018858086,
+    "mae": 7.742257444099461,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2244,18 +2244,18 @@
     }
   },
   "Rajkot|48": {
-    "mae": 9.270118410447065,
+    "mae": 10.30282846165998,
     "params": {
       "n_estimators": 500,
+      "max_depth": 6,
       "learning_rate": 0.03,
-      "max_depth": 4,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Rajkot|72": {
-    "mae": 9.690108398892987,
+    "mae": 11.134231406395589,
     "params": {
       "n_estimators": 500,
       "learning_rate": 0.03,
@@ -2266,40 +2266,7 @@
     }
   },
   "Rajkot|96": {
-    "mae": 11.162235980776687,
-    "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Rajkot|120": {
-    "mae": 8.924325968166293,
-    "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
-      "n_jobs": -1
-    }
-  },
-  "Rajkot|144": {
-    "mae": 8.844530223571148,
-    "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Rajkot|168": {
-    "mae": 9.12412232955297,
+    "mae": 10.924479410383436,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2309,8 +2276,41 @@
       "n_jobs": -1
     }
   },
+  "Rajkot|120": {
+    "mae": 10.69702401317901,
+    "params": {
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Rajkot|144": {
+    "mae": 9.257569570676974,
+    "params": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "max_depth": 4,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Rajkot|168": {
+    "mae": 10.252743209035774,
+    "params": {
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
   "Varanasi|24": {
-    "mae": 18.29866511891189,
+    "mae": 18.002773668092463,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2321,7 +2321,7 @@
     }
   },
   "Varanasi|48": {
-    "mae": 27.00168217677696,
+    "mae": 25.721124964925497,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2332,29 +2332,29 @@
     }
   },
   "Varanasi|72": {
-    "mae": 25.358488160697977,
+    "mae": 25.92931966519137,
     "params": {
       "n_estimators": 500,
-      "max_depth": 6,
       "learning_rate": 0.03,
+      "max_depth": 4,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Varanasi|96": {
-    "mae": 21.511885281663446,
+    "mae": 29.934168900383845,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Varanasi|120": {
-    "mae": 20.78234116220232,
+    "mae": 30.99252668926973,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2365,7 +2365,7 @@
     }
   },
   "Varanasi|144": {
-    "mae": 19.685548975049834,
+    "mae": 28.873384383504423,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2376,7 +2376,7 @@
     }
   },
   "Varanasi|168": {
-    "mae": 20.344241237640382,
+    "mae": 30.49104124370374,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2387,7 +2387,7 @@
     }
   },
   "Amritsar|24": {
-    "mae": 17.699774678548174,
+    "mae": 16.40424196435771,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -2398,7 +2398,7 @@
     }
   },
   "Amritsar|48": {
-    "mae": 22.981601427547897,
+    "mae": 23.1875387262415,
     "params": {
       "n_estimators": 500,
       "learning_rate": 0.03,
@@ -2409,40 +2409,40 @@
     }
   },
   "Amritsar|72": {
-    "mae": 21.990018149438846,
+    "mae": 25.364144102284605,
     "params": {
       "n_estimators": 500,
-      "max_depth": 6,
       "learning_rate": 0.03,
+      "max_depth": 4,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Amritsar|96": {
-    "mae": 24.09750141261779,
+    "mae": 21.73228006227321,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Amritsar|120": {
-    "mae": 21.454823064804078,
+    "mae": 20.69208697451359,
     "params": {
       "n_estimators": 500,
-      "max_depth": 6,
       "learning_rate": 0.03,
+      "max_depth": 4,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Amritsar|144": {
-    "mae": 22.395956703468606,
+    "mae": 19.08508284485456,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -2453,7 +2453,7 @@
     }
   },
   "Amritsar|168": {
-    "mae": 25.398867112430022,
+    "mae": 22.034612550922468,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -2464,18 +2464,18 @@
     }
   },
   "Chandigarh|24": {
-    "mae": 17.68342222935945,
+    "mae": 17.432190687239437,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Chandigarh|48": {
-    "mae": 22.906241151398305,
+    "mae": 24.677383664506593,
     "params": {
       "n_estimators": 500,
       "learning_rate": 0.03,
@@ -2486,18 +2486,51 @@
     }
   },
   "Chandigarh|72": {
-    "mae": 20.58435684887331,
+    "mae": 23.37647321508565,
     "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Chandigarh|96": {
-    "mae": 23.117382298761875,
+    "mae": 22.27360408217819,
+    "params": {
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Chandigarh|120": {
+    "mae": 20.272610108281526,
+    "params": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "max_depth": 4,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Chandigarh|144": {
+    "mae": 21.296146201183443,
+    "params": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "max_depth": 4,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Chandigarh|168": {
+    "mae": 22.90775183718741,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -2507,8 +2540,8 @@
       "n_jobs": -1
     }
   },
-  "Chandigarh|120": {
-    "mae": 23.07085098034234,
+  "Guwahati|24": {
+    "mae": 16.471587731057756,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2518,8 +2551,8 @@
       "n_jobs": -1
     }
   },
-  "Chandigarh|144": {
-    "mae": 22.83987094053288,
+  "Guwahati|48": {
+    "mae": 22.74030064026155,
     "params": {
       "n_estimators": 800,
       "max_depth": 4,
@@ -2529,41 +2562,8 @@
       "n_jobs": -1
     }
   },
-  "Chandigarh|168": {
-    "mae": 23.210977315902706,
-    "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Guwahati|24": {
-    "mae": 23.740819164387233,
-    "params": {
-      "n_estimators": 500,
-      "learning_rate": 0.03,
-      "max_depth": 4,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Guwahati|48": {
-    "mae": 30.40621515535841,
-    "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
   "Guwahati|72": {
-    "mae": 24.60649228072285,
+    "mae": 20.753954945135554,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2574,18 +2574,18 @@
     }
   },
   "Guwahati|96": {
-    "mae": 21.71959245384638,
+    "mae": 22.218232539848042,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "max_depth": 4,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Guwahati|120": {
-    "mae": 20.173654128331215,
+    "mae": 21.20426940201594,
     "params": {
       "n_estimators": 500,
       "learning_rate": 0.03,
@@ -2596,18 +2596,7 @@
     }
   },
   "Guwahati|144": {
-    "mae": 17.60095181809258,
-    "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Guwahati|168": {
-    "mae": 18.61178601582845,
+    "mae": 19.500226477311124,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2617,8 +2606,19 @@
       "n_jobs": -1
     }
   },
+  "Guwahati|168": {
+    "mae": 22.355344704805947,
+    "params": {
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
   "Bhubaneswar|24": {
-    "mae": 20.00714187992429,
+    "mae": 26.08010855020429,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -2629,7 +2629,7 @@
     }
   },
   "Bhubaneswar|48": {
-    "mae": 25.385598399592382,
+    "mae": 32.432053233703336,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -2640,29 +2640,29 @@
     }
   },
   "Bhubaneswar|72": {
-    "mae": 28.21938848163358,
+    "mae": 33.94859911017462,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Bhubaneswar|96": {
-    "mae": 27.10829309818133,
+    "mae": 32.58705211215549,
     "params": {
-      "n_estimators": 500,
-      "learning_rate": 0.03,
+      "n_estimators": 800,
       "max_depth": 4,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
+      "learning_rate": 0.02,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
       "n_jobs": -1
     }
   },
   "Bhubaneswar|120": {
-    "mae": 25.404826769368903,
+    "mae": 33.82827298876265,
     "params": {
       "n_estimators": 500,
       "learning_rate": 0.03,
@@ -2673,18 +2673,18 @@
     }
   },
   "Bhubaneswar|144": {
-    "mae": 26.69077407994221,
+    "mae": 34.91845394694975,
     "params": {
-      "n_estimators": 500,
-      "learning_rate": 0.03,
-      "max_depth": 4,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Bhubaneswar|168": {
-    "mae": 28.03156035343806,
+    "mae": 38.39604172044964,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2695,7 +2695,7 @@
     }
   },
   "Coimbatore|24": {
-    "mae": 12.463336039052425,
+    "mae": 12.64941009042509,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2706,18 +2706,18 @@
     }
   },
   "Coimbatore|48": {
-    "mae": 16.105663043377447,
+    "mae": 15.52636780889865,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
+      "n_estimators": 800,
+      "max_depth": 4,
+      "learning_rate": 0.02,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
       "n_jobs": -1
     }
   },
   "Coimbatore|72": {
-    "mae": 14.190627091440987,
+    "mae": 18.502284898670442,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -2728,7 +2728,7 @@
     }
   },
   "Coimbatore|96": {
-    "mae": 16.167504374825178,
+    "mae": 17.313840640032733,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2739,7 +2739,7 @@
     }
   },
   "Coimbatore|120": {
-    "mae": 14.913408308464863,
+    "mae": 17.081887342784327,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -2750,7 +2750,7 @@
     }
   },
   "Coimbatore|144": {
-    "mae": 16.18505481641317,
+    "mae": 15.942089592450037,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -2761,7 +2761,7 @@
     }
   },
   "Coimbatore|168": {
-    "mae": 12.428222695986431,
+    "mae": 16.07856142692018,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2772,18 +2772,18 @@
     }
   },
   "Kochi|24": {
-    "mae": 14.094475422090696,
+    "mae": 16.030402610334043,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Kochi|48": {
-    "mae": 15.620762312646004,
+    "mae": 19.819215614008147,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -2794,7 +2794,7 @@
     }
   },
   "Kochi|72": {
-    "mae": 15.826496815088376,
+    "mae": 18.481741084527535,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -2805,7 +2805,7 @@
     }
   },
   "Kochi|96": {
-    "mae": 16.361871188369825,
+    "mae": 20.10049481921726,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -2816,7 +2816,7 @@
     }
   },
   "Kochi|120": {
-    "mae": 17.688415066481845,
+    "mae": 19.195178115199987,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -2827,7 +2827,7 @@
     }
   },
   "Kochi|144": {
-    "mae": 16.42146295763783,
+    "mae": 19.87497636334026,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -2838,18 +2838,18 @@
     }
   },
   "Kochi|168": {
-    "mae": 16.058987633387247,
+    "mae": 21.859803275514448,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Thiruvananthapuram|24": {
-    "mae": 18.036802650900448,
+    "mae": 15.2113787827988,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -2860,18 +2860,7 @@
     }
   },
   "Thiruvananthapuram|48": {
-    "mae": 22.704160415118015,
-    "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Thiruvananthapuram|72": {
-    "mae": 20.221449019082225,
+    "mae": 19.512610199254585,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2881,8 +2870,19 @@
       "n_jobs": -1
     }
   },
+  "Thiruvananthapuram|72": {
+    "mae": 19.946002949608697,
+    "params": {
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
   "Thiruvananthapuram|96": {
-    "mae": 17.60505137564567,
+    "mae": 18.204903981383417,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2893,29 +2893,29 @@
     }
   },
   "Thiruvananthapuram|120": {
-    "mae": 17.10855016806691,
+    "mae": 20.648097601434067,
     "params": {
-      "n_estimators": 500,
-      "learning_rate": 0.03,
+      "n_estimators": 800,
       "max_depth": 4,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
+      "learning_rate": 0.02,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
       "n_jobs": -1
     }
   },
   "Thiruvananthapuram|144": {
-    "mae": 17.225359495480856,
+    "mae": 21.01919760453074,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Thiruvananthapuram|168": {
-    "mae": 18.734653020788123,
+    "mae": 23.24579998868183,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -2926,7 +2926,7 @@
     }
   },
   "Visakhapatnam|24": {
-    "mae": 17.844336079616177,
+    "mae": 26.918811288328982,
     "params": {
       "n_estimators": 500,
       "learning_rate": 0.03,
@@ -2937,7 +2937,7 @@
     }
   },
   "Visakhapatnam|48": {
-    "mae": 23.196386430275382,
+    "mae": 37.60844670981843,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -2948,18 +2948,18 @@
     }
   },
   "Visakhapatnam|72": {
-    "mae": 27.71128339911226,
+    "mae": 36.75576850821118,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
+      "n_estimators": 800,
+      "max_depth": 4,
+      "learning_rate": 0.02,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
       "n_jobs": -1
     }
   },
   "Visakhapatnam|96": {
-    "mae": 26.186656111509063,
+    "mae": 40.91355287057382,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -2970,18 +2970,18 @@
     }
   },
   "Visakhapatnam|120": {
-    "mae": 27.100679362188906,
+    "mae": 36.97460824312738,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Visakhapatnam|144": {
-    "mae": 31.47869590918223,
+    "mae": 31.673191320048687,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -2992,7 +2992,18 @@
     }
   },
   "Visakhapatnam|168": {
-    "mae": 29.686951648369035,
+    "mae": 31.172147168611225,
+    "params": {
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Vijayawada|24": {
+    "mae": 27.6054438398558,
     "params": {
       "n_estimators": 500,
       "learning_rate": 0.03,
@@ -3002,41 +3013,30 @@
       "n_jobs": -1
     }
   },
-  "Vijayawada|24": {
-    "mae": 21.262973289119387,
-    "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
   "Vijayawada|48": {
-    "mae": 24.328837899600757,
+    "mae": 34.589799924134134,
     "params": {
       "n_estimators": 500,
-      "max_depth": 6,
       "learning_rate": 0.03,
+      "max_depth": 4,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Vijayawada|72": {
-    "mae": 22.85860541044776,
+    "mae": 31.539658467704005,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
+      "n_estimators": 800,
+      "max_depth": 4,
+      "learning_rate": 0.02,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
       "n_jobs": -1
     }
   },
   "Vijayawada|96": {
-    "mae": 20.134530470958307,
+    "mae": 33.0744519551595,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -3047,106 +3047,62 @@
     }
   },
   "Vijayawada|120": {
-    "mae": 22.45447475994904,
+    "mae": 34.50169779459635,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Vijayawada|144": {
-    "mae": 23.92356933121829,
+    "mae": 32.993523457604,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Vijayawada|168": {
-    "mae": 22.608562088012697,
-    "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
-      "n_jobs": -1
-    }
-  },
-  "Ranchi|24": {
-    "mae": 19.377042029667827,
-    "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
-      "n_jobs": -1
-    }
-  },
-  "Ranchi|48": {
-    "mae": 23.71948484532973,
+    "mae": 27.805307349976168,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
       "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Ranchi|24": {
+    "mae": 16.779763951322956,
+    "params": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "max_depth": 4,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Ranchi|48": {
+    "mae": 23.254672137644498,
+    "params": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "max_depth": 4,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Ranchi|72": {
-    "mae": 21.926024798492886,
-    "params": {
-      "n_estimators": 500,
-      "learning_rate": 0.03,
-      "max_depth": 4,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Ranchi|96": {
-    "mae": 24.113505040461096,
-    "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Ranchi|120": {
-    "mae": 21.590018497989867,
-    "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Ranchi|144": {
-    "mae": 23.428898903758256,
-    "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Ranchi|168": {
-    "mae": 21.90096849600474,
+    "mae": 25.320500043116578,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -3156,8 +3112,52 @@
       "n_jobs": -1
     }
   },
+  "Ranchi|96": {
+    "mae": 23.485078522011086,
+    "params": {
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Ranchi|120": {
+    "mae": 26.659207764030064,
+    "params": {
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Ranchi|144": {
+    "mae": 26.265067493746066,
+    "params": {
+      "n_estimators": 800,
+      "max_depth": 4,
+      "learning_rate": 0.02,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "n_jobs": -1
+    }
+  },
+  "Ranchi|168": {
+    "mae": 25.471533820047334,
+    "params": {
+      "n_estimators": 800,
+      "max_depth": 4,
+      "learning_rate": 0.02,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "n_jobs": -1
+    }
+  },
   "Jamshedpur|24": {
-    "mae": 25.853802201354387,
+    "mae": 19.648200181353786,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -3168,18 +3168,18 @@
     }
   },
   "Jamshedpur|48": {
-    "mae": 26.57200863408108,
+    "mae": 30.464034702767073,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Jamshedpur|72": {
-    "mae": 29.411341725060005,
+    "mae": 34.87833941748383,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -3190,29 +3190,29 @@
     }
   },
   "Jamshedpur|96": {
-    "mae": 38.42346694792935,
+    "mae": 40.206942021405254,
     "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Jamshedpur|120": {
-    "mae": 37.71130957821299,
+    "mae": 43.9458986846494,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Jamshedpur|144": {
-    "mae": 35.77234014530772,
+    "mae": 43.44184825951454,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -3223,18 +3223,18 @@
     }
   },
   "Jamshedpur|168": {
-    "mae": 27.287521636486055,
+    "mae": 46.932606301923684,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Dehradun|24": {
-    "mae": 16.591203078482913,
+    "mae": 16.568430242063773,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -3245,51 +3245,7 @@
     }
   },
   "Dehradun|48": {
-    "mae": 20.724112996868058,
-    "params": {
-      "n_estimators": 500,
-      "learning_rate": 0.03,
-      "max_depth": 4,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Dehradun|72": {
-    "mae": 20.925090812569238,
-    "params": {
-      "n_estimators": 500,
-      "learning_rate": 0.03,
-      "max_depth": 4,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Dehradun|96": {
-    "mae": 23.313658985540496,
-    "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
-      "n_jobs": -1
-    }
-  },
-  "Dehradun|120": {
-    "mae": 24.76407134157752,
-    "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Dehradun|144": {
-    "mae": 25.168103393082767,
+    "mae": 20.388670051644702,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -3299,30 +3255,74 @@
       "n_jobs": -1
     }
   },
-  "Dehradun|168": {
-    "mae": 24.334896039962768,
+  "Dehradun|72": {
+    "mae": 20.292141766018336,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Dehradun|96": {
+    "mae": 20.747743171369528,
+    "params": {
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Dehradun|120": {
+    "mae": 20.810732565784907,
+    "params": {
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Dehradun|144": {
+    "mae": 22.65728803205718,
+    "params": {
+      "n_estimators": 800,
+      "max_depth": 4,
+      "learning_rate": 0.02,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "n_jobs": -1
+    }
+  },
+  "Dehradun|168": {
+    "mae": 21.844098122606,
+    "params": {
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Shimla|24": {
-    "mae": 15.582244391580229,
+    "mae": 15.362989020240681,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Shimla|48": {
-    "mae": 20.61761505276549,
+    "mae": 19.51545686678649,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -3333,29 +3333,29 @@
     }
   },
   "Shimla|72": {
-    "mae": 18.039979105327852,
+    "mae": 23.0673318775422,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Shimla|96": {
-    "mae": 23.211654678421404,
+    "mae": 21.118615860409204,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Shimla|120": {
-    "mae": 23.36424168233339,
+    "mae": 19.649755178818683,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -3366,29 +3366,7 @@
     }
   },
   "Shimla|144": {
-    "mae": 24.54779721289566,
-    "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Shimla|168": {
-    "mae": 22.58798670371373,
-    "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Srinagar|24": {
-    "mae": 11.992945313685148,
+    "mae": 22.84156453281782,
     "params": {
       "n_estimators": 800,
       "max_depth": 4,
@@ -3398,41 +3376,41 @@
       "n_jobs": -1
     }
   },
-  "Srinagar|48": {
-    "mae": 14.41537385080375,
+  "Shimla|168": {
+    "mae": 27.55811032381925,
+    "params": {
+      "n_estimators": 800,
+      "max_depth": 4,
+      "learning_rate": 0.02,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "n_jobs": -1
+    }
+  },
+  "Srinagar|24": {
+    "mae": 11.451703106662084,
     "params": {
       "n_estimators": 500,
-      "max_depth": 6,
       "learning_rate": 0.03,
+      "max_depth": 4,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Srinagar|48": {
+    "mae": 12.74496320491463,
+    "params": {
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Srinagar|72": {
-    "mae": 13.165793537500486,
-    "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
-      "n_jobs": -1
-    }
-  },
-  "Srinagar|96": {
-    "mae": 12.029568711477307,
-    "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
-      "n_jobs": -1
-    }
-  },
-  "Srinagar|120": {
-    "mae": 14.19951616471189,
+    "mae": 11.946225066578716,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -3442,8 +3420,30 @@
       "n_jobs": -1
     }
   },
+  "Srinagar|96": {
+    "mae": 11.220327243098506,
+    "params": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "max_depth": 4,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Srinagar|120": {
+    "mae": 14.151178573106936,
+    "params": {
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
   "Srinagar|144": {
-    "mae": 14.501097767623431,
+    "mae": 14.141385509617521,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -3454,7 +3454,7 @@
     }
   },
   "Srinagar|168": {
-    "mae": 17.72530822753906,
+    "mae": 13.877415196176923,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -3465,117 +3465,18 @@
     }
   },
   "Jodhpur|24": {
-    "mae": 12.121750670497857,
+    "mae": 12.826897957292909,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Jodhpur|48": {
-    "mae": 12.76260280235141,
-    "params": {
-      "n_estimators": 500,
-      "learning_rate": 0.03,
-      "max_depth": 4,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Jodhpur|72": {
-    "mae": 13.06067666580428,
-    "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Jodhpur|96": {
-    "mae": 13.943381132192949,
-    "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Jodhpur|120": {
-    "mae": 13.664636962425892,
-    "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Jodhpur|144": {
-    "mae": 13.24362420150914,
-    "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Jodhpur|168": {
-    "mae": 14.406785583496093,
-    "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
-      "n_jobs": -1
-    }
-  },
-  "Gwalior|24": {
-    "mae": 19.33900287220779,
-    "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
-      "n_jobs": -1
-    }
-  },
-  "Gwalior|48": {
-    "mae": 22.22078451642803,
-    "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
-      "subsample": 0.8,
-      "colsample_bytree": 0.8,
-      "n_jobs": -1
-    }
-  },
-  "Gwalior|72": {
-    "mae": 22.796155373492645,
-    "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
-      "n_jobs": -1
-    }
-  },
-  "Gwalior|96": {
-    "mae": 22.022371087002394,
+    "mae": 15.432566443395832,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -3585,19 +3486,41 @@
       "n_jobs": -1
     }
   },
-  "Gwalior|120": {
-    "mae": 24.056021369895355,
+  "Jodhpur|72": {
+    "mae": 16.17522077647918,
     "params": {
-      "n_estimators": 300,
-      "max_depth": 3,
-      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
-  "Gwalior|144": {
-    "mae": 23.89733880819734,
+  "Jodhpur|96": {
+    "mae": 18.61483118975604,
+    "params": {
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Jodhpur|120": {
+    "mae": 15.159549473149116,
+    "params": {
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Jodhpur|144": {
+    "mae": 14.61539057510159,
     "params": {
       "n_estimators": 800,
       "max_depth": 4,
@@ -3607,8 +3530,85 @@
       "n_jobs": -1
     }
   },
+  "Jodhpur|168": {
+    "mae": 13.426993714108992,
+    "params": {
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Gwalior|24": {
+    "mae": 18.317680550476894,
+    "params": {
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Gwalior|48": {
+    "mae": 19.9682508373692,
+    "params": {
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Gwalior|72": {
+    "mae": 20.97774830739433,
+    "params": {
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Gwalior|96": {
+    "mae": 22.40346817087244,
+    "params": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "max_depth": 4,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Gwalior|120": {
+    "mae": 23.834428703057377,
+    "params": {
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.03,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
+  "Gwalior|144": {
+    "mae": 23.63302848418177,
+    "params": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "max_depth": 4,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "n_jobs": -1
+    }
+  },
   "Gwalior|168": {
-    "mae": 21.96600074370702,
+    "mae": 22.753606721430874,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -3619,7 +3619,7 @@
     }
   },
   "Raipur|24": {
-    "mae": 15.52064948220855,
+    "mae": 23.21015959256433,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -3630,7 +3630,7 @@
     }
   },
   "Raipur|48": {
-    "mae": 25.88206517088647,
+    "mae": 27.659543098691366,
     "params": {
       "n_estimators": 300,
       "max_depth": 3,
@@ -3641,18 +3641,18 @@
     }
   },
   "Raipur|72": {
-    "mae": 31.54012226085758,
+    "mae": 31.30391647268873,
     "params": {
-      "n_estimators": 800,
-      "max_depth": 4,
-      "learning_rate": 0.02,
-      "subsample": 0.9,
-      "colsample_bytree": 0.9,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Raipur|96": {
-    "mae": 27.29443309534734,
+    "mae": 34.650441812585896,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -3663,18 +3663,18 @@
     }
   },
   "Raipur|120": {
-    "mae": 25.444916429858523,
+    "mae": 34.39865405302093,
     "params": {
-      "n_estimators": 500,
-      "max_depth": 6,
-      "learning_rate": 0.03,
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
       "subsample": 0.8,
       "colsample_bytree": 0.8,
       "n_jobs": -1
     }
   },
   "Raipur|144": {
-    "mae": 24.83240140148045,
+    "mae": 38.576248678776885,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
@@ -3685,7 +3685,7 @@
     }
   },
   "Raipur|168": {
-    "mae": 26.160043891270952,
+    "mae": 38.87982725663618,
     "params": {
       "n_estimators": 500,
       "max_depth": 6,
